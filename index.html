@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Portfolio</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/My Logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="pageLoader" class="page-loader">
+    <img src="images/My Logo.png" alt="John Sherwin T. Limbo logo" class="page-loader__logo">
+    <p class="page-loader__mark">Loading<span class="page-loader__dot">.</span><span class="page-loader__dot">.</span><span class="page-loader__dot">.</span></p>
+    <div class="page-loader__bar"></div>
+  </div>
+
+  <div class="app-wrapper">
+
+    <header class="site-header site-header--floating" id="siteHeader">
+      <nav class="content-width nav-bar" aria-label="Primary navigation">
+        <a href="index.html" class="brand shrink-0" aria-label="Back to home">
+          <img src="images/My Logo.png" alt="John Sherwin T. Limbo logo" class="brand-logo">
+          <span class="brand-text">
+            <p class="brand-name">Professional Portfolio</p>
+            <p class="brand-role">Personal Resume Website</p>
+          </span>
+        </a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+          <i data-lucide="menu" class="nav-toggle__icon-open"></i>
+          <i data-lucide="x" class="nav-toggle__icon-close"></i>
+        </button>
+        <div class="nav-menu" id="navMenu">
+          <a class="nav-item" href="#profile">Profile</a>
+          <a class="nav-item" href="#experience">Experience</a>
+          <a class="nav-item" href="#projects">Projects</a>
+          <a class="nav-item" href="#skills">Skills</a>
+          <a class="nav-item" href="others.html">Others</a>
+          <a class="nav-item" href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top" class="main--with-fixed-header">
+
+      <section id="profile" class="w-full">
+        <div class="content-width grid gap-10 py-12 md:grid-cols-[220px_1fr] md:gap-14 md:py-16">
+          <aside class="mx-auto w-full max-w-[220px] md:mx-0">
+            <div class="portrait-frame">
+              <img loading="lazy" src="images/Profile Picture.JPG" alt="Professional headshot of John Sherwin T. Limbo in formal attire">
+            </div>
+          </aside>
+          <div class="max-w-3xl">
+            <p class="eyebrow">Professional Portfolio</p>
+            <h1 class="serif heading-hero mt-3">John Sherwin T. Limbo</h1>
+            <p class="hero-role">Bachelor of Science in Computer Science Graduate</p>
+            <p class="text-body mt-6">
+              Computer Science graduate with foundational experience in web development, interaction design,
+              multimedia production, content management, and collaborative project work. Brings a practical,
+              detail-oriented approach to building clear and user-focused digital experiences.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="resume-section w-full">
+        <div class="content-width grid gap-9 py-12 md:grid-cols-[230px_1fr] md:py-16">
+          <div>
+            <p class="eyebrow">Background</p>
+            <h2 class="serif heading-lg mt-3">Education</h2>
+          </div>
+          <div>
+            <article class="resume-entry">
+              <p class="text-period">2021 — 2025</p>
+              <h3 class="heading-card mt-2">Bachelor of Science in Computer Science</h3>
+              <p class="resume-entry__org">University of Makati - College of Computing and Information Sciences</p>
+              <p class="text-small mt-3">
+                Developed foundational knowledge in
+                computer science, web development, interaction design, and digital project development.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="resume-section w-full">
+        <div class="content-width py-12 md:py-16">
+          <div class="max-w-2xl">
+            <p class="eyebrow">Professional History</p>
+            <h2 class="serif heading-lg mt-3">Experience</h2>
+            <p class="text-small mt-4">
+              Hands-on roles that applied design, communication, and technical skills in a professional setting.
+            </p>
+          </div>
+
+          <div class="mt-9 grid gap-5 lg:grid-cols-3">
+            <article class="project-card">
+              <p class="text-tiny-strong uppercase tracking-[.12em]">November 2024 — July 2026</p>
+              <h3 class="heading-card mt-3">Student Volunteer</h3>
+              <p class="resume-entry__org mt-1">University of Makati — Center for Integrated Communications</p>
+              <p class="text-small mt-4">
+                Contributed across multiple roles such as Production Assistant, Website Content Editor
+                of the University of Makati Website, Camera Operator, and Character Generator (CG).
+              </p>
+              <p class="project-card__tag">Production · Web Content · CG</p>
+            </article>
+
+            <article class="project-card">
+              <p class="text-tiny-strong uppercase tracking-[.12em]">January 2025 — May 2025</p>
+              <h3 class="heading-card mt-3">Intern</h3>
+              <p class="resume-entry__org mt-1">University of Makati — Center for Integrated Communications</p>
+              <p class="text-small mt-4">
+                Assisted in developing, maintaining, and editing the University of Makati website, ensuring brand alignment and creating the Brand Assets and UMak-SDGs pages.
+              </p>
+              <p class="project-card__tag">Web Content · Brand Standards</p>
+            </article>
+
+            <article class="project-card">
+              <p class="text-tiny-strong uppercase tracking-[.12em]">January 2025 — June 2025</p>
+              <h3 class="heading-card mt-3">Web Developer</h3>
+              <p class="resume-entry__org mt-1">UMak Student Multimedia Organization (USMO) — Social Media Dept.</p>
+              <p class="text-small mt-4">
+                Co-developed the school publication's news website system for UMak Student Multimedia
+                Organization and effectively publishes content from the editorial team.
+              </p>
+              <p class="project-card__tag">Web Development · CMS</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="resume-section w-full">
+        <div class="content-width py-12 md:py-16">
+          <div class="max-w-2xl">
+            <p class="eyebrow">Selected Work</p>
+            <h2 class="serif heading-lg mt-3">Projects</h2>
+            <p class="text-small mt-4">
+              Academic and applied project work focused on digital communication, cybersecurity awareness,
+              and visual identity.
+            </p>
+          </div>
+
+          <div class="mt-9 grid gap-5 lg:grid-cols-3">
+            <article class="project-card">
+              <p class="text-tiny-strong uppercase tracking-[.12em]">January 2025 — June 2026</p>
+              <h3 class="heading-card mt-3">University of Makati Student Multimedia Organization News Website</h3>
+              <p class="resume-entry__org mt-1">University of Makati Student Multimedia Organization (USMO)</p>
+              <p class="text-small mt-4">
+                Co-developed USMO's official news website using WordPress and Hostinger, building a
+                responsive UI and CMS that helps the editorial team publish content to campus.
+              </p>
+              <p class="project-card__tag">WordPress · Hostinger · CMS</p>
+            </article>
+
+            <article class="project-card">
+              <p class="text-tiny-strong uppercase tracking-[.12em]">August 2025 — May 2026</p>
+              <h3 class="heading-card mt-3">
+                Scamester: An Adaptive Mobile Cybersecurity Game Leveraging Random Forest Algorithm
+                to Enhance Cyber Threat Awareness
+              </h3>
+              <p class="resume-entry__org mt-1">University of Makati</p>
+              <p class="text-small mt-4">
+                 Led this thesis project as group leader and primary researcher, directing methodology,
+                research design, and evaluation in line with ISO/IEC 25010 usability standards.
+              </p>
+              <p class="project-card__tag">Research · Game-Based Learning · ISO/IEC 25010</p>
+            </article>
+
+            <article class="project-card">
+              <p class="text-tiny-strong uppercase tracking-[.12em]">2025 - 2026</p>
+              <h3 class="heading-card mt-3">University of Makati: Logo Guidelines</h3>
+              <p class="resume-entry__org mt-1">University of Makati</p>
+              <p class="text-small mt-4">
+                 Edited and organized the university's official logo guidelines, covering seal, color, and
+                typography usage. The project continues post-graduation under UMak's administration.
+              </p>
+              <p class="project-card__tag">Brand Guidelines · Visual Identity</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="resume-section w-full">
+        <div class="content-width py-12 md:py-16">
+          <div class="max-w-2xl">
+            <p class="eyebrow">Capabilities</p>
+            <h2 class="serif heading-lg mt-3">Professional Skills</h2>
+            <p class="text-small mt-4">Core competencies applied across design, development, and communication work.</p>
+          </div>
+
+          <div class="mt-9 grid gap-5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+            <article class="tool-card">
+              <i data-lucide="search-check" class="tool-card__icon"></i>
+              <p class="tool-card__name">Brand Audit</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="shield-check" class="tool-card__icon"></i>
+              <p class="tool-card__name">Brand Management</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="code" class="tool-card__icon"></i>
+              <p class="tool-card__name">HTML</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="mouse-pointer-click" class="tool-card__icon"></i>
+              <p class="tool-card__name">Interaction Design</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="file-code-2" class="tool-card__icon"></i>
+              <p class="tool-card__name">PHP</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="clipboard-check" class="tool-card__icon"></i>
+              <p class="tool-card__name">Policy Compliance</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="layout" class="tool-card__icon"></i>
+              <p class="tool-card__name">UI/UX Design</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="paintbrush" class="tool-card__icon"></i>
+              <p class="tool-card__name">Visual Design</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="file-text" class="tool-card__icon"></i>
+              <p class="tool-card__name">Website Content</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="tools" class="resume-section w-full">
+        <div class="content-width py-12 md:py-16">
+          <div class="max-w-2xl">
+            <p class="eyebrow">Toolkit</p>
+            <h2 class="serif heading-lg mt-3">Tools</h2>
+            <p class="text-small mt-4">Software and platforms used across design, development, and content work.</p>
+          </div>
+
+          <div class="mt-9 grid gap-5 grid-cols-2 lg:grid-cols-5">
+            <article class="tool-card">
+              <i data-lucide="pen-tool" class="tool-card__icon"></i>
+              <p class="tool-card__name">Figma</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="palette" class="tool-card__icon"></i>
+              <p class="tool-card__name">Canva</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="feather" class="tool-card__icon"></i>
+              <p class="tool-card__name">Adobe Illustrator</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="globe" class="tool-card__icon"></i>
+              <p class="tool-card__name">WordPress</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="code-2" class="tool-card__icon"></i>
+              <p class="tool-card__name">Visual Studio Code</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="leadership" class="resume-section w-full">
+        <div class="content-width py-12 md:py-16">
+          <div class="max-w-2xl">
+            <p class="eyebrow">Beyond Technical Work</p>
+            <h2 class="serif heading-lg mt-3">Personal Skills</h2>
+            <p class="text-small mt-4">Soft skills and leadership qualities developed through academic, organizational, and team-based work.</p>
+          </div>
+
+          <div class="mt-9 grid gap-5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+            <article class="tool-card">
+              <i data-lucide="users" class="tool-card__icon"></i>
+              <p class="tool-card__name">Team Leadership</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="message-circle" class="tool-card__icon"></i>
+              <p class="tool-card__name">Communication</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="clock" class="tool-card__icon"></i>
+              <p class="tool-card__name">Time Management</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="puzzle" class="tool-card__icon"></i>
+              <p class="tool-card__name">Problem Solving</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="refresh-cw" class="tool-card__icon"></i>
+              <p class="tool-card__name">Adaptability</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="link-2" class="tool-card__icon"></i>
+              <p class="tool-card__name">Collaboration</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="target" class="tool-card__icon"></i>
+              <p class="tool-card__name">Goal Setting</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="lightbulb" class="tool-card__icon"></i>
+              <p class="tool-card__name">Critical Thinking</p>
+            </article>
+            <article class="tool-card">
+              <i data-lucide="ear" class="tool-card__icon"></i>
+              <p class="tool-card__name">Active Listening</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="certificates" class="resume-section w-full">
+        <div class="content-width py-12 md:py-16">
+          <div class="max-w-2xl">
+            <p class="eyebrow">Development</p>
+            <h2 class="serif heading-lg mt-3">Certificates, Seminars &amp; Workshops</h2>
+            <p class="text-small mt-4">
+              Programs and trainings attended, each showing the certificate type and the seminar or
+              course it was issued for.
+            </p>
+          </div>
+
+          <div class="mt-9 grid gap-4 sm:grid-cols-2">
+
+            <article class="detail-card">
+              <div class="detail-card__icon-wrap"><i data-lucide="award"></i></div>
+              <div>
+                <h3 class="detail-card__title">Introduction of Cybersecurity</h3>
+                <p class="detail-card__desc">Successfully achieved student level credentials for completing the Introduction to Cybersecurity course.</p>
+                <span class="detail-card__meta">Course Completion</span>
+              </div>
+            </article>
+
+            <article class="detail-card">
+              <div class="detail-card__icon-wrap"><i data-lucide="award"></i></div>
+              <div>
+                <h3 class="detail-card__title">AI Literacy and Workforce Readiness</h3>
+                <p class="detail-card__desc">Active participation in a foundational session on responsible AI literecy and workforce readiness, presented by Microsoft Philippines.</p>
+                <span class="detail-card__meta">Certificate of Participation</span>
+              </div>
+            </article>
+
+            <article class="detail-card">
+              <div class="detail-card__icon-wrap"><i data-lucide="award"></i></div>
+              <div>
+                <h3 class="detail-card__title">Valuable Contribution Across Multiple Roles for the Center for Integrated Communications</h3>
+                <p class="detail-card__desc">Appreciation for valuable contributions as a production assistant, website content editor, camera operator, and CG operator for university-wide events, demonstrating versatility and readiness to support various needs at the Center for Integrated Communications.</p>
+                <span class="detail-card__meta">Certificate of Appreciation</span>
+              </div>
+            </article>
+
+            <article class="detail-card">
+              <div class="detail-card__icon-wrap"><i data-lucide="award"></i></div>
+              <div>
+                <h3 class="detail-card__title">Website Developer Volunteer for the University of Makati Student Multimedia Organization Website</h3>
+                <p class="detail-card__desc">Recognizes the technical expertise and dedication in building the official USMO website - greatly enhancing the organization's digital presence, communication, and community engagement.</p>
+                <span class="detail-card__meta">Certificate of Appreciation</span>
+              </div>
+            </article>
+
+            <article class="detail-card">
+              <div class="detail-card__icon-wrap"><i data-lucide="award"></i></div>
+              <div>
+                <h3 class="detail-card__title">Inclusive Leadership: How New IT Graduates Can Influence Workplace Culture for Greater Belonging</h3>
+                <p class="detail-card__desc">Session exploring how new IT graduates can foster an inclusive environment and promote belonging in the workplace.</p>
+                <span class="detail-card__meta">Certificate of Attendance</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="digital-works" class="resume-section w-full">
+        <div class="content-width py-12 md:py-16">
+          <div class="max-w-2xl">
+            <p class="eyebrow">Proof of Work</p>
+            <h2 class="serif heading-lg mt-3">Digital Works and Projects</h2>
+            <p class="text-small mt-4">
+              Screenshots and files showcasing the projects listed above, and other digital creations.
+            </p>
+          </div>
+
+          <div class="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+            <article class="evidence-card">
+              <img class="evidence-card__thumb" src="images/News USMO Website.png" alt="Screenshot of the UMak Student Multimedia News Website">
+              <div class="evidence-card__body">
+                <p class="evidence-card__meta">News Website</p>
+                <h3 class="evidence-card__title">University of Makati Student Multimedia Organization News Digital Website</h3>
+                <a class="evidence-card__link" href="https://news.usmo.org.ph/" target="_blank" rel="noopener noreferrer">View website →</a>
+              </div>
+            </article>
+
+            <article class="evidence-card">
+              <img class="evidence-card__thumb" src="Scamester Screenshot/Screenshot.jpg" alt="Screenshot of the Scamester cybersecurity game">
+              <div class="evidence-card__body">
+                <p class="evidence-card__meta">Thesis Project</p>
+                <h3 class="evidence-card__title">Scamester Cybersecurity Game</h3>
+                <a class="evidence-card__link" href="digital-work-scamester.html">View project →</a>
+              </div>
+            </article>
+
+            <article class="evidence-card">
+              <img class="evidence-card__thumb" src="images/Brand Guide Page.png" alt="University of Makati logo guidelines document">
+              <div class="evidence-card__body">
+                <p class="evidence-card__meta">Brand Guide Page</p>
+                <h3 class="evidence-card__title">University of Makati - Brand Guide</h3>
+                <a class="evidence-card__link" href="https://www.umak.edu.ph/centers/cic/brandcentral/brandguide/" target="_blank" rel="noopener noreferrer">View the page →</a>
+              </div>
+            </article>
+
+            <article class="evidence-card">
+              <img class="evidence-card__thumb" src="images/Mixle Mini Series_Flower Photography.jpg" alt="University of Makati logo guidelines document">
+              <div class="evidence-card__body">
+                <p class="evidence-card__meta">Mixle Philippines Page</p>
+                <h3 class="evidence-card__title">Mixle Mini Series: Flower Photography</h3>
+                <a class="evidence-card__link" href="digital-work-mixle.html">View project →</a>
+              </div>
+            </article>
+
+             <article class="evidence-card">
+              <img class="evidence-card__thumb" src="images/Figma_Tilikha.png" alt="University of Makati logo guidelines document">
+              <div class="evidence-card__body">
+                <p class="evidence-card__meta">Figma Design</p>
+                <h3 class="evidence-card__title">Tilikha: Game-based Learning Design</h3>
+                <a class="evidence-card__link" href="https://www.figma.com/design/DtlhbXEfZiUrJr8nyWLDHp/TILIKHA--Game-Based-Learning?node-id=2-8&t=P01ookRbTvRePjUe-1" target="_blank" rel="noopener noreferrer">View the design →</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="evidence" class="resume-section w-full">
+        <div class="content-width py-12 md:py-16">
+          <div class="max-w-2xl">
+            <p class="eyebrow">Proof of Credentials</p>
+            <h2 class="serif heading-lg mt-3">Evidence</h2>
+            <p class="text-small mt-4">
+              This shows the Certificates, Seminars, and other trainings attended, each showing the certificate type and the seminar or course it was issued for.
+            </p>
+          </div>
+
+          <div class="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+            <article class="evidence-card">
+              <img class="evidence-card__thumb" src="evidence/internship-cert.jpg" alt="IT Internship Seminar Certificate scan">
+              <div class="evidence-card__body">
+                <p class="evidence-card__meta">Certificate</p>
+                <h3 class="evidence-card__title">IT Internship Seminar Certificate</h3>
+                <a class="evidence-card__link" href="evidence/internship-cert.jpg" target="_blank" rel="noopener">View file →</a>
+              </div>
+            </article>
+
+            <article class="evidence-card">
+              <img class="evidence-card__thumb" src="evidence/cybersecurity-cert.jpg" alt="Data Security and Cybersecurity Awareness Certificate scan">
+              <div class="evidence-card__body">
+                <p class="evidence-card__meta">Certificate</p>
+                <h3 class="evidence-card__title">Data Security &amp; Cybersecurity Awareness Certificate</h3>
+                <a class="evidence-card__link" href="evidence/cybersecurity-cert.jpg" target="_blank" rel="noopener">View file →</a>
+              </div>
+            </article>
+
+            <article class="evidence-card">
+              <img class="evidence-card__thumb" src="evidence/negotiation-cert.jpg" alt="Power of Negotiation Communication Certificate scan">
+              <div class="evidence-card__body">
+                <p class="evidence-card__meta">Certificate</p>
+                <h3 class="evidence-card__title">Power of Negotiation Communication Certificate</h3>
+                <a class="evidence-card__link" href="evidence/negotiation-cert.jpg" target="_blank" rel="noopener">View file →</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="references" class="resume-section w-full">
+        <div class="content-width grid gap-9 py-12 md:grid-cols-[230px_1fr] md:py-16">
+          <div>
+            <p class="eyebrow">Character &amp; Work References</p>
+            <h2 class="serif heading-lg mt-3">References</h2>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+
+            <article class="reference-card">
+              <h3 class="heading-card heading-card--sm">Medarlito Grate Jr.</h3>
+              <p class="reference-card__role">Website, Branding Management & Livestream Production</p>
+              <p class="reference-card__org">University of Makati - Center for Integrated Communications</p>
+            </article>
+
+            <article class="reference-card">
+              <h3 class="heading-card heading-card--sm">Steve Villacorta</h3>
+              <p class="reference-card__role">Director</p>
+              <p class="reference-card__org">University of Makati - Center for Integrated Communications</p>
+              
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="content-width py-12 md:py-16">
+          <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
+
+            <div class="contact-panel">
+              <h3 class="contact-panel__title">Request My Resume</h3>
+              <p class="contact-panel__desc">Fill out the form and it'll open your email app with a message ready to send to me.</p>
+
+              <form id="resumeRequestForm" class="contact-form">
+                <label class="contact-form__label" for="reqName">Name</label>
+                <input class="contact-form__input" type="text" id="reqName" name="name" placeholder="Your full name" required>
+
+                <label class="contact-form__label" for="reqEmail">Email</label>
+                <input class="contact-form__input" type="email" id="reqEmail" name="email" placeholder="you@example.com" required>
+
+                <label class="contact-form__label" for="reqMessage">Message (optional)</label>
+                <textarea class="contact-form__input contact-form__textarea" id="reqMessage" name="message" rows="3" placeholder="Let me know what this is for..."></textarea>
+
+                <button type="submit" class="btn btn--primary mt-1">Request Resume</button>
+                <p class="contact-form__note">This opens your email app with a pre-filled message — nothing is sent automatically.</p>
+              </form>
+            </div>
+
+            <div>
+              <p class="eyebrow eyebrow--light">Contact</p>
+              <h2 class="serif contact-heading">Open to professional opportunities and collaborative digital work.</h2>
+              <p class="contact-copy">
+                For opportunities, collaborations, or project-related conversations, please feel welcome to get in touch.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="content-width flex flex-col gap-3 py-6 text-xs sm:flex-row sm:items-center sm:justify-between">
+        <p class="footer-copy">Made with Love | Copyright 2026 Personal Portfolio.</p>
+        <a class="footer-link" href="#top">Back to top</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

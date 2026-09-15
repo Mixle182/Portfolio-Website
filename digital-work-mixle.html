@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mixle Philippines: Content Creation | John Sherwin T. Limbo</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/My Logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-mixle">
+  <div id="pageLoader" class="page-loader">
+    <img src="images/My Logo.png" alt="John Sherwin T. Limbo logo" class="page-loader__logo">
+    <p class="page-loader__mark">Loading<span class="page-loader__dot">.</span><span class="page-loader__dot">.</span><span class="page-loader__dot">.</span></p>
+    <div class="page-loader__bar"></div>
+  </div>
+
+  <div class="app-wrapper">
+
+    <header class="site-header site-header--floating" id="siteHeader">
+      <nav class="content-width nav-bar" aria-label="Primary navigation">
+        <a href="index.html#top" class="brand shrink-0" aria-label="Back to home">
+          <img src="images/My Logo.png" alt="John Sherwin T. Limbo logo" class="brand-logo">
+          <span class="brand-text">
+            <p class="brand-name">Professional Portfolio</p>
+            <p class="brand-role">Personal Resume Website</p>
+          </span>
+        </a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+          <i data-lucide="menu" class="nav-toggle__icon-open"></i>
+          <i data-lucide="x" class="nav-toggle__icon-close"></i>
+        </button>
+        <div class="nav-menu" id="navMenu">
+          <a class="nav-item" href="index.html#profile">Profile</a>
+          <a class="nav-item" href="index.html#experience">Experience</a>
+          <a class="nav-item" href="index.html#projects">Projects</a>
+          <a class="nav-item" href="index.html#skills">Skills</a>
+          <a class="nav-item" href="others.html">Others</a>
+          <a class="nav-item" href="index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+
+      <section class="w-full">
+        <div class="showcase-banner showcase-banner--tall">
+          <img src="images/Mixle Mini Series_Flower Photography.jpg" alt="Flower photography piece created for Mixle Philippines">
+
+          <div class="showcase-banner__content">
+            <p class="showcase-banner__eyebrow reveal-in reveal-in--1">Content Creation</p>
+            <h1 class="showcase-banner__title reveal-in reveal-in--2">
+              Mixle Philippines: Album Covers, Nature Photography &amp; Quote Design
+            </h1>
+            <p class="showcase-banner__meta reveal-in reveal-in--3">Mixle Philippines · Ongoing</p>
+          </div>
+
+          <a href="#mixle-details" class="showcase-scroll-cue" aria-label="Scroll down to see more">
+            <span>See more</span>
+            <i data-lucide="chevron-down"></i>
+          </a>
+        </div>
+
+        <div id="mixle-details" class="content-width py-10 md:py-14">
+
+          <div class="usmo-intro reveal">
+            <img src="evidence/mixle-logo.jpg" alt="Mixle Philippines logo" class="usmo-intro__logo mixle-logo-circle">
+            <div class="usmo-intro__text">
+              <h2 class="heading-card">About Mixle Philippines</h2>
+              <p class="text-body mt-3">
+                Mixle Philippines is a digital content creation page that shares visual work centered on
+                album cover art, nature photography, and quote-based graphic design. The page's output
+                blends photography and typography into pieces meant to be shared and enjoyed on social
+                media, from moody album artwork to calming nature shots paired with reflective quotes.
+              </p>
+            </div>
+          </div>
+
+          <div class="max-w-5xl mt-10 reveal">
+            <h2 class="heading-card">What I Contribute</h2>
+            <p class="text-body mt-3">
+              My contributions to Mixle Philippines span photography, visual design, and content
+              creation — including mini photography series like the Flower Photography set featured
+              in the banner above, along with quote-driven graphics and album cover concepts.
+            </p>
+          </div>
+
+          <div class="feature-scroll mt-10">
+
+            <!-- Invisible trigger zones: provide scroll height and drive which
+                 feature is active, without showing any content of their own -->
+            <div class="feature-scroll__triggers">
+              <div class="feature-scroll__trigger" data-feature="album"></div>
+              <div class="feature-scroll__trigger" data-feature="nature"></div>
+              <div class="feature-scroll__trigger" data-feature="quote"></div>
+            </div>
+
+            <!-- Pinned in place while scrolling: image + text both stay fixed
+                 on screen and crossfade between features instead of scrolling -->
+            <div class="feature-scroll__pinned">
+
+              <div class="feature-scroll__image-wrap">
+                <img class="feature-scroll__image is-active" data-feature="album" src="evidence/mixle-album-cover.jpg" alt="Album cover design sample">
+                <img class="feature-scroll__image" data-feature="nature" src="images/Mixle Mini Series_Flower Photography.jpg" alt="Nature photography sample">
+                <img class="feature-scroll__image" data-feature="quote" src="evidence/mixle-quote-design.jpg" alt="Quote design sample">
+              </div>
+
+              <div class="feature-scroll__text-wrap">
+                <div class="feature-scroll__detail is-active" data-feature="album">
+                  <span class="feature-scroll__badge"><i data-lucide="disc"></i></span>
+                  <h3 class="feature-scroll__title">Album Covers</h3>
+                  <p class="feature-scroll__desc">Original cover art concepts designed for music releases and playlists.</p>
+                </div>
+
+                <div class="feature-scroll__detail" data-feature="nature">
+                  <span class="feature-scroll__badge"><i data-lucide="flower-2"></i></span>
+                  <h3 class="feature-scroll__title">Nature Photography</h3>
+                  <p class="feature-scroll__desc">Mini photography series capturing flowers, landscapes, and natural detail.</p>
+                </div>
+
+                <div class="feature-scroll__detail" data-feature="quote">
+                  <span class="feature-scroll__badge"><i data-lucide="quote"></i></span>
+                  <h3 class="feature-scroll__title">Quote Designs</h3>
+                  <p class="feature-scroll__desc">Typography-driven graphics pairing reflective quotes with visual design.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="max-w-5xl mt-10 reveal">
+            <h2 class="heading-card">My Role &amp; Purpose</h2>
+            <p class="text-body mt-3">
+              Working on Mixle Philippines lets me exercise the creative side of my skill set — visual
+              design, photography, and content creation — outside of formal development work. It reflects
+              an interest in blending imagery and words into something that resonates with an audience,
+              complementing the more technical, structured work found elsewhere in this portfolio.
+            </p>
+          </div>
+
+          <div class="mission-vision mt-16 reveal">
+            <div class="mission-vision__fan">
+              <img src="evidence/mixle-album-cover.jpg" alt="Album cover design sample" class="mission-vision__img mission-vision__img--1">
+              <img src="images/Mixle Mini Series_Flower Photography.jpg" alt="Nature photography sample" class="mission-vision__img mission-vision__img--2">
+              <img src="evidence/mixle-quote-design.jpg" alt="Quote design sample" class="mission-vision__img mission-vision__img--3">
+            </div>
+
+            <div class="mission-vision__text">
+              <h2 class="heading-card">Mission &amp; Vision</h2>
+
+              <div class="mission-vision__block mt-4">
+                <h3 class="mission-vision__label">Mission</h3>
+                <p class="text-body mt-2">
+                  To create visual and typographic content — album covers, nature photography, and
+                  quote-based designs — that resonates with people and brings a calming, reflective
+                  presence to their social feeds.
+                </p>
+              </div>
+
+              <div class="mission-vision__block mt-6">
+                <h3 class="mission-vision__label">Vision</h3>
+                <p class="text-body mt-2">
+                  To grow into a recognizable creative page known for thoughtful, aesthetic content that
+                  blends photography and words into something people genuinely want to pause and enjoy.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://www.facebook.com/mixlephilippines" target="_blank" rel="noopener" class="visit-bubble mt-12 reveal">
+            <img src="images/Mixle Mini Series_Flower Photography.jpg" alt="Preview of Mixle Philippines content" class="visit-bubble__image">
+            <div class="visit-bubble__overlay"></div>
+            <div class="visit-bubble__content">
+              <div class="visit-bubble__icon"><i data-lucide="facebook"></i></div>
+              <p class="visit-bubble__title">Visit the Mixle Philippines Page</p>
+              <p class="visit-bubble__desc">See the full album covers, photography, and quote designs on Facebook</p>
+              <span class="visit-bubble__cta">Open Facebook Page <i data-lucide="arrow-up-right"></i></span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="content-width flex flex-col gap-3 py-6 text-xs sm:flex-row sm:items-center sm:justify-between">
+        <p class="footer-copy">© 2026 John Sherwin T. Limbo. Personal Portfolio.</p>
+        <a class="footer-link" href="index.html#top">Back to home</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
