@@ -1060,7 +1060,7 @@ a:focus-visible, button:focus-visible {
    feature and stops there; scrolling again moves to the next */
 .feature-scroll {
   position: relative;
-  height: 300vh;
+  height: 450vh;
 }
 
 /* Invisible zones that provide scroll height and drive which feature is
@@ -1075,14 +1075,14 @@ a:focus-visible, button:focus-visible {
   position: absolute;
   left: 0;
   right: 0;
-  height: 60vh;
+  height: 90vh;
 }
 
 .feature-scroll__trigger:nth-child(1) { top: 0; }
-.feature-scroll__trigger:nth-child(2) { top: 60vh; }
-.feature-scroll__trigger:nth-child(3) { top: 120vh; }
-.feature-scroll__trigger:nth-child(4) { top: 180vh; }
-.feature-scroll__trigger:nth-child(5) { top: 240vh; }
+.feature-scroll__trigger:nth-child(2) { top: 90vh; }
+.feature-scroll__trigger:nth-child(3) { top: 180vh; }
+.feature-scroll__trigger:nth-child(4) { top: 270vh; }
+.feature-scroll__trigger:nth-child(5) { top: 360vh; }
 
 /* The pinned viewport: stays fixed on screen while the triggers scroll underneath */
 .feature-scroll__pinned {
@@ -1103,12 +1103,12 @@ a:focus-visible, button:focus-visible {
   }
 }
 
-/* Image: bigger square with a soft glow, centered */
+/* Image: stable 16:9 screenshot frame with a soft glow, centered */
 .feature-scroll__image-wrap {
   position: relative;
   width: 100%;
   max-width: 440px;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 16 / 9;
   flex-shrink: 0;
   overflow: hidden;
   border: 1px solid #2b2b30;
