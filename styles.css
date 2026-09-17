@@ -293,16 +293,18 @@ a:focus-visible, button:focus-visible {
 
 @media (max-width: 1039px) {
   .nav-bar {
-    padding-left: .35rem;
-    padding-right: .35rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
   }
 
   .brand {
-    margin-left: .2rem;
+    margin-left: .25rem;
+    padding-left: .1rem;
   }
 
   .nav-toggle {
-    margin-right: .2rem;
+    margin-right: .25rem;
+    margin-left: .5rem;
   }
 }
 
