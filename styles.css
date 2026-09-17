@@ -2302,3 +2302,28 @@ a:focus-visible, button:focus-visible {
 .brand-guide-page .visit-bubble__cta {
   color: var(--umak-yellow);
 }
+
+.brand-guide-showcase-divider {
+  width: min(100%, 760px);
+  height: 3px;
+  margin: 4rem auto 0;
+  background: linear-gradient(90deg, transparent, var(--umak-yellow), var(--umak-sky), transparent);
+}
+
+.brand-guide-fan-stage {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.brand-guide-fan-stage .mission-vision__fan {
+  max-width: 560px;
+}
+
+.brand-guide-fan-stage + .mission-vision {
+  margin-top: 2rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(16, 45, 102, .2);
+}
