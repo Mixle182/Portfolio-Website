@@ -1833,3 +1833,308 @@ a:focus-visible, button:focus-visible {
   text-transform: uppercase;
   letter-spacing: .1em;
 }
+
+/* ==========================================================================
+   Brand Guide page styles
+   ========================================================================== */
+.brand-guide-page {
+  background: #f3f4f6;
+}
+
+.brand-guide-banner {
+  background: linear-gradient(180deg, #0e2e6d 0%, #0e3d75 34%, #0d5a8a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-guide-banner__grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: .65;
+}
+
+.brand-guide-banner__content {
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+}
+
+.brand-guide-banner__eyebrow {
+  font-size: 1.15rem;
+  letter-spacing: .08em;
+}
+
+.brand-guide-banner__title {
+  font-size: clamp(2.7rem, 6vw, 7rem);
+  line-height: .9;
+  letter-spacing: -.07em;
+}
+
+.brand-guide-banner__meta {
+  font-size: 1rem;
+  letter-spacing: .04em;
+}
+
+.brand-guide-banner__orb {
+  position: absolute;
+  right: 16px;
+  top: 18px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,.3);
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.brand-guide-heading__eyebrow {
+  font-size: 1.05rem;
+  opacity: .8;
+  margin: 0;
+  color: var(--navy);
+}
+
+.brand-guide-heading__title {
+  font-size: clamp(2.1rem, 4vw, 4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  margin: .25rem 0 0;
+  letter-spacing: -.04em;
+  color: var(--navy);
+}
+
+.brand-guide-section {
+  border-top: 1px solid rgba(15,23,42,.15);
+  margin-top: 2.2rem;
+  padding-top: 2.2rem;
+}
+
+.brand-guide-section__title {
+  text-align: center;
+  font-size: clamp(1.7rem, 2.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -.04em;
+  margin-bottom: 1.5rem;
+  color: var(--navy);
+}
+
+.brand-guide-spec-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1.5rem 0;
+  margin-bottom: 1rem;
+}
+
+.brand-guide-spec-card {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.brand-guide-spec-card--ghost {
+  min-height: 260px;
+  position: relative;
+}
+
+.brand-guide-seal {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-guide-seal--gold {
+  background: #f4d437;
+  border: 10px solid #1b1b1b;
+  box-shadow: inset 0 0 0 4px #1b1b1b;
+}
+
+.brand-guide-seal--gray {
+  width: 260px;
+  height: 260px;
+  background: #f0f0f0;
+  border: 10px solid #1b1b1b;
+  box-shadow: inset 0 0 0 6px #f0f0f0;
+}
+
+.brand-guide-seal__inner {
+  position: absolute;
+  border-radius: 50%;
+  border: 6px solid #1b1b1b;
+  background: transparent;
+}
+
+.brand-guide-seal__inner--blue {
+  width: 140px;
+  height: 140px;
+  background: #0a2f6a;
+  left: 18px;
+  top: 18px;
+}
+
+.brand-guide-seal__inner--blue-small {
+  width: 120px;
+  height: 120px;
+  background: #0a2f6a;
+  left: 20px;
+  top: 20px;
+}
+
+.brand-guide-seal__ring {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 6px solid #1b1b1b;
+  background: transparent;
+}
+
+.brand-guide-seal__ring--gray {
+  width: 175px;
+  height: 175px;
+}
+
+.brand-guide-seal__bar {
+  position: absolute;
+  width: 220px;
+  height: 12px;
+  background: #1b1b1b;
+  border-radius: 6px;
+  transform: rotate(-18deg);
+}
+
+.brand-guide-seal__bar--gray {
+  width: 200px;
+  height: 10px;
+  transform: rotate(-14deg);
+}
+
+.brand-guide-seal__stem {
+  position: absolute;
+  width: 40px;
+  height: 110px;
+  background: #1b1b1b;
+  border-radius: 12px;
+  left: 112px;
+  top: 65px;
+  transform: rotate(12deg);
+}
+
+.brand-guide-seal__stem--gray {
+  width: 36px;
+  height: 90px;
+  left: 117px;
+  top: 78px;
+  transform: rotate(10deg);
+}
+
+.brand-guide-seal__text {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  color: #1b1b1b;
+  transform: rotate(-12deg);
+}
+
+.brand-guide-seal__text--gray {
+  font-size: 1.7rem;
+  transform: rotate(-10deg);
+}
+
+.brand-guide-badge {
+  width: 160px;
+  padding: .9rem 1.3rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.brand-guide-badge--dark {
+  background: #111827;
+  color: #fff;
+}
+
+.brand-guide-spec-palette {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 320px;
+}
+
+.brand-guide-spec-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 52px;
+  border: 3px solid #1b1b1b;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.brand-guide-spec-pill--yellow {
+  background: #f0d628;
+  color: #1b1b1b;
+}
+
+.brand-guide-spec-pill--sky {
+  background: #5aa7dc;
+  color: #fff;
+}
+
+.brand-guide-spec-pill--navy {
+  background: #0d1b4d;
+  color: #fff;
+}
+
+.brand-guide-footnote {
+  text-align: center;
+  color: rgba(15,23,42,.8);
+  font-size: 1.05rem;
+  margin-top: 1rem;
+}
+
+.brand-guide-button-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.brand-guide-button {
+  background: #102d66;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: none;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .brand-guide-button {
+    width: 100%;
+  }
+}
