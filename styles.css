@@ -2364,7 +2364,7 @@ a:focus-visible, button:focus-visible {
 
   .brand-guide-page .brand-guide-banner__screenshot {
     right: auto;
-    width: calc(100% + 24px);
+    width: 125%;
     max-width: none;
     object-position: left center;
   }
