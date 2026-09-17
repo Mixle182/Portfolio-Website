@@ -1060,7 +1060,7 @@ a:focus-visible, button:focus-visible {
    feature and stops there; scrolling again moves to the next */
 .feature-scroll {
   position: relative;
-  height: 180vh;
+  height: 300vh;
 }
 
 /* Invisible zones that provide scroll height and drive which feature is
@@ -1081,6 +1081,8 @@ a:focus-visible, button:focus-visible {
 .feature-scroll__trigger:nth-child(1) { top: 0; }
 .feature-scroll__trigger:nth-child(2) { top: 60vh; }
 .feature-scroll__trigger:nth-child(3) { top: 120vh; }
+.feature-scroll__trigger:nth-child(4) { top: 180vh; }
+.feature-scroll__trigger:nth-child(5) { top: 240vh; }
 
 /* The pinned viewport: stays fixed on screen while the triggers scroll underneath */
 .feature-scroll__pinned {
