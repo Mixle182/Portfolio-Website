@@ -2379,8 +2379,10 @@ a:focus-visible, button:focus-visible {
   }
 
   .brand-guide-page #brand-guide-details {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    width: 100%;
+    max-width: 1120px;
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
   }
 
   .brand-guide-page .usmo-intro {
@@ -2388,9 +2390,9 @@ a:focus-visible, button:focus-visible {
   }
 
   .brand-guide-page .usmo-intro__logo {
-    width: min(100%, 240px);
-    height: auto;
-    aspect-ratio: 16 / 9;
+    width: 130px;
+    height: 130px;
+    aspect-ratio: auto;
   }
 
   .brand-guide-page .feature-scroll {
@@ -2406,8 +2408,8 @@ a:focus-visible, button:focus-visible {
   }
 
   .brand-guide-page .feature-scroll__image-wrap {
-    width: min(100%, 360px);
-    max-width: 360px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .brand-guide-page .feature-scroll__text-wrap {
