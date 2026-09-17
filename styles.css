@@ -1109,7 +1109,7 @@ a:focus-visible, button:focus-visible {
 .feature-scroll__image-wrap {
   position: relative;
   width: 100%;
-  max-width: 440px;
+  max-width: 600px;
   aspect-ratio: 16 / 9;
   flex-shrink: 0;
   overflow: hidden;
@@ -1119,7 +1119,7 @@ a:focus-visible, button:focus-visible {
 
 @media (max-width: 480px) {
   .feature-scroll__image-wrap {
-    max-width: 200px;
+    max-width: 300px;
   }
 
   .feature-scroll__text-wrap {
