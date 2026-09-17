@@ -2311,8 +2311,9 @@ a:focus-visible, button:focus-visible {
 }
 
 .brand-guide-identity-section {
-  margin-top: 0;
-  padding-top: 0;
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #cbd5e1;
 }
 
 .brand-guide-summary {
@@ -2332,6 +2333,11 @@ a:focus-visible, button:focus-visible {
   margin-bottom: 2rem;
 }
 
+.feature-scroll {
+  border-top: 1px solid #cbd5e1;
+  padding-top: 2rem;
+}
+
 .brand-guide-fan-stage {
   display: flex;
   justify-content: center;
@@ -2345,3 +2351,88 @@ a:focus-visible, button:focus-visible {
 }
 
 .brand-guide-fan-stage + .mission-vision { margin-top: 2rem; }
+
+@media (max-width: 640px) {
+  .brand-guide-page {
+    overflow-x: hidden;
+  }
+
+  .brand-guide-page .showcase-banner--tall {
+    min-height: 330px;
+    height: 58vh;
+  }
+
+  .brand-guide-page .showcase-banner__content {
+    top: calc(4.5rem + 20%);
+    padding: 0 1rem;
+  }
+
+  .brand-guide-page .showcase-banner__title {
+    max-width: 22rem;
+    font-size: clamp(1.45rem, 7vw, 2.1rem);
+    line-height: 1.12;
+  }
+
+  .brand-guide-page .showcase-banner__meta {
+    font-size: .75rem;
+    line-height: 1.45;
+  }
+
+  .brand-guide-page #brand-guide-details {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .brand-guide-page .usmo-intro {
+    gap: 1rem;
+  }
+
+  .brand-guide-page .usmo-intro__logo {
+    width: min(100%, 240px);
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .brand-guide-page .feature-scroll {
+    height: 450vh;
+    padding-top: 1.25rem;
+  }
+
+  .brand-guide-page .feature-scroll__pinned {
+    min-height: 100vh;
+    height: auto;
+    padding: 2rem 0;
+    gap: 1.5rem;
+  }
+
+  .brand-guide-page .feature-scroll__image-wrap {
+    width: min(100%, 360px);
+    max-width: 360px;
+  }
+
+  .brand-guide-page .feature-scroll__text-wrap {
+    width: min(100%, 22rem);
+    min-height: 210px;
+  }
+
+  .brand-guide-page .feature-scroll__title {
+    font-size: 1.45rem;
+  }
+
+  .brand-guide-page .feature-scroll__desc {
+    font-size: .88rem;
+  }
+
+  .brand-guide-page .brand-guide-summary {
+    margin-bottom: 1rem;
+  }
+
+  .brand-guide-page .brand-guide-fan-stage {
+    margin-top: 1rem;
+    padding-bottom: 0;
+  }
+
+  .brand-guide-page .brand-guide-fan-stage .mission-vision__fan {
+    max-width: 360px;
+  }
+}
