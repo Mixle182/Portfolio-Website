@@ -2,6 +2,142 @@ document.addEventListener("DOMContentLoaded", function () {
 
   lucide.createIcons();
 
+  function ensureReadingMask() {
+    if (!document.getElementById("readingMask")) {
+      var mask = document.createElement("div");
+      mask.id = "readingMask";
+      document.body.appendChild(mask);
+    }
+  }
+
+  function initAccessibilityWidget() {
+    if (document.getElementById("accessibilityWidget")) return;
+
+    ensureReadingMask();
+
+    var widget = document.createElement("div");
+    widget.id = "accessibilityWidget";
+    widget.className = "accessibility-widget";
+
+    widget.innerHTML = [
+      '<button class="accessibility-trigger" type="button" aria-label="Open accessibility settings" aria-expanded="false">',
+      '  <span aria-hidden="true">✦</span>',
+      '</button>',
+      '<div class="accessibility-panel" aria-hidden="true">',
+      '  <div class="accessibility-panel__header">',
+      '    <div class="accessibility-panel__title-wrap">',
+      '      <span class="accessibility-panel__icon" aria-hidden="true">✦</span>',
+      '      <h2>Accessibility</h2>',
+      '    </div>',
+      '    <div class="accessibility-panel__actions">',
+      '      <button type="button" class="accessibility-panel__action" aria-label="Search settings">⌕</button>',
+      '      <button type="button" class="accessibility-panel__action" aria-label="Zoom settings">◌</button>',
+      '      <button type="button" class="accessibility-panel__close" aria-label="Close accessibility panel">×</button>',
+      '    </div>',
+      '  </div>',
+      '  <div class="accessibility-panel__body">',
+      '    <div class="accessibility-group">',
+      '      <h3>Text</h3>',
+      '      <div class="accessibility-grid">',
+      '        <button type="button" class="a11y-option" data-a11y-toggle="bigger-text"><span class="a11y-option__icon">T</span><span>Bigger text</span></button>',
+      '        <button type="button" class="a11y-option" data-a11y-toggle="line-height"><span class="a11y-option__icon">↕</span><span>Line height</span></button>',
+      '        <button type="button" class="a11y-option" data-a11y-toggle="text-align"><span class="a11y-option__icon">≡</span><span>Text align</span></button>',
+      '        <button type="button" class="a11y-option" data-a11y-toggle="readable-font"><span class="a11y-option__icon">Aa</span><span>Readable font</span></button>',
+      '      </div>',
+      '    </div>',
+      '    <div class="accessibility-group">',
+      '      <h3>Visual</h3>',
+      '      <div class="accessibility-grid">',
+      '        <button type="button" class="a11y-option" data-a11y-toggle="contrast"><span class="a11y-option__icon">◐</span><span>Contrast</span></button>',
+      '        <button type="button" class="a11y-option" data-a11y-toggle="grayscale"><span class="a11y-option__icon">◍</span><span>Grayscale</span></button>',
+      '        <button type="button" class="a11y-option" data-a11y-toggle="hide-images"><span class="a11y-option__icon">◫</span><span>Hide images</span></button>',
+      '        <button type="button" class="a11y-option" data-a11y-toggle="pause-animations"><span class="a11y-option__icon">⏸</span><span>Pause animations</span></button>',
+      '      </div>',
+      '    </div>',
+      '    <div class="accessibility-group">',
+      '      <h3>Orientation</h3>',
+      '      <div class="accessibility-grid">',
+      '        <button type="button" class="a11y-option" data-a11y-toggle="highlight-links"><span class="a11y-option__icon">↗</span><span>Highlight links</span></button>',
+      '        <button type="button" class="a11y-option" data-a11y-toggle="reading-mask"><span class="a11y-option__icon">▣</span><span>Reading mask</span></button>',
+      '        <button type="button" class="a11y-option" data-a11y-toggle="outline-focus"><span class="a11y-option__icon">◌</span><span>Outline focus</span></button>',
+      '        <button type="button" class="a11y-option" data-a11y-toggle="page-structure"><span class="a11y-option__icon">▱</span><span>Page structure</span></button>',
+      '      </div>',
+      '    </div>',
+      '  </div>',
+      '  <div class="accessibility-panel__footer">',
+      '    <button type="button" class="accessibility-apply">Apply all</button>',
+      '  </div>',
+      '</div>'
+    ].join("");
+
+    document.body.appendChild(widget);
+
+    var trigger = widget.querySelector(".accessibility-trigger");
+    var panel = widget.querySelector(".accessibility-panel");
+    var closeButton = widget.querySelector(".accessibility-panel__close");
+    var applyButton = widget.querySelector(".accessibility-apply");
+    var toggles = widget.querySelectorAll(".a11y-option");
+
+    function setToggleState(key, enabled) {
+      document.body.classList.toggle("a11y-" + key, enabled);
+      var option = panel.querySelector('[data-a11y-toggle="' + key + '"]');
+      if (option) option.classList.toggle("is-on", enabled);
+      try {
+        window.localStorage.setItem("a11y-" + key, enabled ? "1" : "0");
+      } catch (error) {}
+    }
+
+    function syncToggles() {
+      toggles.forEach(function (button) {
+        var key = button.getAttribute("data-a11y-toggle");
+        var enabled = false;
+        try {
+          enabled = window.localStorage.getItem("a11y-" + key) === "1";
+        } catch (error) {}
+        setToggleState(key, enabled);
+      });
+    }
+
+    trigger.addEventListener("click", function () {
+      var isOpen = panel.classList.toggle("is-open");
+      trigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      panel.setAttribute("aria-hidden", isOpen ? "false" : "true");
+    });
+
+    closeButton.addEventListener("click", function () {
+      panel.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded", "false");
+      panel.setAttribute("aria-hidden", "true");
+    });
+
+    applyButton.addEventListener("click", function () {
+      panel.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded", "false");
+      panel.setAttribute("aria-hidden", "true");
+    });
+
+    toggles.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var key = button.getAttribute("data-a11y-toggle");
+        var enabled = !document.body.classList.contains("a11y-" + key);
+        setToggleState(key, enabled);
+      });
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!panel.classList.contains("is-open")) return;
+      if (!widget.contains(event.target)) {
+        panel.classList.remove("is-open");
+        trigger.setAttribute("aria-expanded", "false");
+        panel.setAttribute("aria-hidden", "true");
+      }
+    });
+
+    syncToggles();
+  }
+
+  initAccessibilityWidget();
+
   /* ------------------------------------------------------------------
      Mobile hamburger nav: toggle the dropdown open/closed, close it
      after tapping a link, and close it if the user taps outside it
