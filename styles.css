@@ -2310,6 +2310,23 @@ a:focus-visible, button:focus-visible {
   background: linear-gradient(90deg, transparent, var(--umak-yellow), var(--umak-sky), transparent);
 }
 
+.brand-guide-identity-section {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.brand-guide-section-divider {
+  width: min(100%, 760px);
+  height: 3px;
+  margin: 3.5rem auto 0;
+  background: linear-gradient(90deg, transparent, var(--umak-yellow), var(--umak-sky), transparent);
+}
+
+.brand-guide-section-divider--between {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
 .brand-guide-fan-stage {
   display: flex;
   justify-content: center;
@@ -2322,8 +2339,4 @@ a:focus-visible, button:focus-visible {
   max-width: 560px;
 }
 
-.brand-guide-fan-stage + .mission-vision {
-  margin-top: 2rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid rgba(16, 45, 102, .2);
-}
+.brand-guide-fan-stage + .mission-vision { margin-top: 2rem; }
