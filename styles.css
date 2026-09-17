@@ -2204,3 +2204,101 @@ a:focus-visible, button:focus-visible {
     width: 100%;
   }
 }
+
+/* UMak palette overrides for the Brand Guide showcase */
+.brand-guide-page {
+  --umak-navy: #102d66;
+  --umak-blue: #1d2981;
+  --umak-sky: #6ea9d7;
+  --umak-yellow: #f4d52b;
+  --umak-ink: #111c4e;
+  background: #f5f8fc;
+  color: var(--umak-ink);
+}
+
+.brand-guide-page .site-header,
+.brand-guide-page .nav-menu,
+.brand-guide-page .site-footer {
+  background: var(--umak-navy);
+  border-color: rgba(110, 169, 215, .35);
+}
+
+.brand-guide-page .brand-role,
+.brand-guide-page .footer-copy {
+  color: #c8ddf0;
+}
+
+.brand-guide-page .nav-item,
+.brand-guide-page .footer-link {
+  color: var(--umak-yellow);
+}
+
+.brand-guide-page .nav-item:hover,
+.brand-guide-page .nav-item--active,
+.brand-guide-page .footer-link:hover {
+  color: #fff;
+}
+
+.brand-guide-page .nav-toggle {
+  border-color: var(--umak-sky);
+  color: #fff;
+}
+
+.brand-guide-page .page-loader {
+  background: var(--umak-navy);
+}
+
+.brand-guide-page .page-loader__bar {
+  background: var(--umak-blue);
+}
+
+.brand-guide-page .page-loader__bar::after {
+  background-color: var(--umak-yellow);
+}
+
+.brand-guide-page .showcase-banner__eyebrow,
+.brand-guide-page .mission-vision__label {
+  color: var(--umak-yellow);
+}
+
+.brand-guide-page .showcase-banner__eyebrow {
+  background-color: transparent;
+}
+
+.brand-guide-page .brand-guide-banner {
+  background: linear-gradient(135deg, var(--umak-navy), var(--umak-blue) 58%, var(--umak-sky));
+}
+
+.brand-guide-page .brand-guide-heading__eyebrow,
+.brand-guide-page .brand-guide-heading__title,
+.brand-guide-page .heading-card,
+.brand-guide-page .feature-scroll__title {
+  color: var(--umak-navy);
+}
+
+.brand-guide-page .text-body,
+.brand-guide-page .feature-scroll__desc {
+  color: #30466f;
+}
+
+.brand-guide-page .feature-scroll__badge {
+  background: rgba(244, 213, 43, .2);
+  border-color: var(--umak-yellow);
+  color: var(--umak-navy);
+}
+
+.brand-guide-page .feature-scroll__image-wrap,
+.brand-guide-page .mission-vision__img {
+  border-color: var(--umak-navy);
+  box-shadow: 0 24px 48px -16px rgba(16, 45, 102, .42);
+}
+
+.brand-guide-page .visit-bubble {
+  border-color: var(--umak-sky);
+  box-shadow: 0 24px 48px -16px rgba(16, 45, 102, .35);
+}
+
+.brand-guide-page .visit-bubble__icon,
+.brand-guide-page .visit-bubble__cta {
+  color: var(--umak-yellow);
+}
