@@ -2362,6 +2362,13 @@ a:focus-visible, button:focus-visible {
     height: 58vh;
   }
 
+  .brand-guide-page .brand-guide-banner__screenshot {
+    right: auto;
+    width: calc(100% + 24px);
+    max-width: none;
+    object-position: left center;
+  }
+
   .brand-guide-page .showcase-banner__content {
     top: calc(4.5rem + 20%);
     padding: 0 1rem;
