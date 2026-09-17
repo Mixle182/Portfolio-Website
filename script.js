@@ -156,7 +156,10 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         }
       });
-    }, { threshold: 0.5 });
+    }, {
+      rootMargin: "-45% 0px -45% 0px",
+      threshold: 0
+    });
 
     scrollTriggers.forEach(function (trigger) {
       featureScrollObserver.observe(trigger);

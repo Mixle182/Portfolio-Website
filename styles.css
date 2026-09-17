@@ -838,7 +838,7 @@ a:focus-visible, button:focus-visible {
   position: relative;
   width: 100%;
   max-width: 320px;
-  height: 280px;
+  height: 270px;
   flex-shrink: 0;
 }
 
@@ -846,8 +846,9 @@ a:focus-visible, button:focus-visible {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 200px;
-  height: 200px;
+  width: 240px;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border: 3px solid #17171a;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, .55);
@@ -881,12 +882,13 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 420px) {
   .mission-vision__fan {
     max-width: 260px;
-    height: 210px;
+    height: 175px;
   }
 
   .mission-vision__img {
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 
   .mission-vision__img--1 {
