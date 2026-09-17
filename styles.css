@@ -858,47 +858,38 @@ a:focus-visible, button:focus-visible {
 
 .mission-vision__img--1 {
   z-index: 1;
-  transform: translateX(-50%) translate(-220px, 58px) rotate(-18deg);
+  transform: translateX(-50%) translate(-165px, 48px) rotate(-15deg);
 }
 
 .mission-vision__img--2 {
   z-index: 2;
-  transform: translateX(-50%) translate(-110px, 30px) rotate(-11deg);
+  transform: translateX(-50%) translate(-55px, 16px) rotate(-6deg);
 }
 
 .mission-vision__img--3 {
-  z-index: 5;
-  transform: translateX(-50%) translate(0, 0) rotate(0deg);
+  z-index: 3;
+  transform: translateX(-50%) translate(55px, 16px) rotate(6deg);
 }
 
 .mission-vision__img--4 {
-  z-index: 2;
-  transform: translateX(-50%) translate(110px, 30px) rotate(11deg);
-}
-
-.mission-vision__img--5 {
-  z-index: 1;
-  transform: translateX(-50%) translate(220px, 58px) rotate(18deg);
+  z-index: 4;
+  transform: translateX(-50%) translate(165px, 48px) rotate(15deg);
 }
 
 .mission-vision__fan:hover .mission-vision__img--1 {
-  transform: translateX(-50%) translate(-280px, 42px) rotate(-24deg);
-}
-
-.mission-vision__fan:hover .mission-vision__img--3 {
-  transform: translateX(-50%) translate(0, 0) rotate(0deg);
+  transform: translateX(-50%) translate(-205px, 32px) rotate(-20deg);
 }
 
 .mission-vision__fan:hover .mission-vision__img--2 {
-  transform: translateX(-50%) translate(-140px, 20px) rotate(-17deg);
+  transform: translateX(-50%) translate(-72px, 8px) rotate(-10deg);
+}
+
+.mission-vision__fan:hover .mission-vision__img--3 {
+  transform: translateX(-50%) translate(72px, 8px) rotate(10deg);
 }
 
 .mission-vision__fan:hover .mission-vision__img--4 {
-  transform: translateX(-50%) translate(140px, 20px) rotate(17deg);
-}
-
-.mission-vision__fan:hover .mission-vision__img--5 {
-  transform: translateX(-50%) translate(280px, 42px) rotate(24deg);
+  transform: translateX(-50%) translate(205px, 32px) rotate(20deg);
 }
 
 /* Tighter fan on narrow phones so the outer cards never crowd the screen edge */
@@ -915,43 +906,35 @@ a:focus-visible, button:focus-visible {
   }
 
   .mission-vision__img--1 {
-    transform: translateX(-50%) translate(-110px, 38px) rotate(-18deg);
+    transform: translateX(-50%) translate(-105px, 30px) rotate(-15deg);
   }
 
   .mission-vision__img--2 {
-    transform: translateX(-50%) translate(-55px, 20px) rotate(-11deg);
+    transform: translateX(-50%) translate(-35px, 10px) rotate(-6deg);
   }
 
   .mission-vision__img--3 {
-    transform: translateX(-50%) translate(0, 0) rotate(0deg);
+    transform: translateX(-50%) translate(35px, 10px) rotate(6deg);
   }
 
   .mission-vision__img--4 {
-    transform: translateX(-50%) translate(55px, 20px) rotate(11deg);
-  }
-
-  .mission-vision__img--5 {
-    transform: translateX(-50%) translate(110px, 38px) rotate(18deg);
+    transform: translateX(-50%) translate(105px, 30px) rotate(15deg);
   }
 
   .mission-vision__fan:hover .mission-vision__img--1 {
-    transform: translateX(-50%) translate(-130px, 28px) rotate(-22deg);
+    transform: translateX(-50%) translate(-122px, 22px) rotate(-20deg);
   }
 
   .mission-vision__fan:hover .mission-vision__img--2 {
-    transform: translateX(-50%) translate(-65px, 12px) rotate(-15deg);
+    transform: translateX(-50%) translate(-46px, 6px) rotate(-10deg);
   }
 
   .mission-vision__fan:hover .mission-vision__img--3 {
-    transform: translateX(-50%) translate(0, 0) rotate(0deg);
+    transform: translateX(-50%) translate(46px, 6px) rotate(10deg);
   }
 
   .mission-vision__fan:hover .mission-vision__img--4 {
-    transform: translateX(-50%) translate(65px, 12px) rotate(15deg);
-  }
-
-  .mission-vision__fan:hover .mission-vision__img--5 {
-    transform: translateX(-50%) translate(130px, 28px) rotate(22deg);
+    transform: translateX(-50%) translate(122px, 22px) rotate(20deg);
   }
 }
 
@@ -2347,7 +2330,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .brand-guide-fan-stage .mission-vision__fan {
-  max-width: 560px;
+  max-width: 520px;
 }
 
 .brand-guide-fan-stage + .mission-vision { margin-top: 2rem; }
