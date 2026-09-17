@@ -2315,6 +2315,11 @@ a:focus-visible, button:focus-visible {
   padding-top: 0;
 }
 
+.brand-guide-summary {
+  max-width: 920px;
+  margin: 0 auto 2rem;
+}
+
 .brand-guide-section-divider {
   width: min(100%, 760px);
   height: 3px;
