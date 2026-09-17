@@ -2362,7 +2362,7 @@ a:focus-visible, button:focus-visible {
     height: 58vh;
   }
 
-  .brand-guide-page .brand-guide-banner__screenshot {
+  .brand-guide-page .brand-guide-banner .brand-guide-banner__screenshot {
     right: auto;
     width: 125%;
     max-width: none;
