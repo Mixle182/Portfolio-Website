@@ -1764,12 +1764,13 @@ a:focus-visible, button:focus-visible {
 .evidence-card__link:hover { color: var(--navy); }
 
 .evidence-card__status {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: .35rem;
   margin-top: .9rem;
   font-size: .75rem;
   font-weight: 700;
+  line-height: 1.4;
 }
 
 .evidence-card__status svg {
@@ -1786,6 +1787,11 @@ a:focus-visible, button:focus-visible {
 
 .evidence-card__status--maintenance svg {
   stroke: #dc2626;
+}
+
+.evidence-card__status + .evidence-card__link {
+  display: block;
+  margin-top: .75rem;
 }
 
 /* ==========================================================================
