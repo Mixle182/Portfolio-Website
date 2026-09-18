@@ -878,19 +878,19 @@ a:focus-visible, button:focus-visible {
 }
 
 .mission-vision__fan.is-spread .mission-vision__img--1 {
-  transform: translateX(-50%) translate(-175px, 52px) rotate(-67.5deg);
+  transform: translateX(-50%) translate(-135px, 34px) rotate(-24deg);
 }
 
 .mission-vision__fan.is-spread .mission-vision__img--2 {
-  transform: translateX(-50%) translate(-58px, 10px) rotate(-22.5deg);
+  transform: translateX(-50%) translate(-54px, 10px) rotate(-10deg);
 }
 
 .mission-vision__fan.is-spread .mission-vision__img--3 {
-  transform: translateX(-50%) translate(58px, 10px) rotate(22.5deg);
+  transform: translateX(-50%) translate(54px, 10px) rotate(10deg);
 }
 
 .mission-vision__fan.is-spread .mission-vision__img--4 {
-  transform: translateX(-50%) translate(175px, 52px) rotate(67.5deg);
+  transform: translateX(-50%) translate(135px, 34px) rotate(24deg);
 }
 
 @media (max-width: 420px) {
@@ -921,19 +921,19 @@ a:focus-visible, button:focus-visible {
   }
 
   .mission-vision__fan.is-spread .mission-vision__img--1 {
-    transform: translateX(-50%) translate(-104px, 34px) rotate(-67.5deg);
+    transform: translateX(-50%) translate(-82px, 24px) rotate(-24deg);
   }
 
   .mission-vision__fan.is-spread .mission-vision__img--2 {
-    transform: translateX(-50%) translate(-34px, 8px) rotate(-22.5deg);
+    transform: translateX(-50%) translate(-34px, 8px) rotate(-10deg);
   }
 
   .mission-vision__fan.is-spread .mission-vision__img--3 {
-    transform: translateX(-50%) translate(34px, 8px) rotate(22.5deg);
+    transform: translateX(-50%) translate(34px, 8px) rotate(10deg);
   }
 
   .mission-vision__fan.is-spread .mission-vision__img--4 {
-    transform: translateX(-50%) translate(104px, 34px) rotate(67.5deg);
+    transform: translateX(-50%) translate(82px, 24px) rotate(24deg);
   }
 }
 
