@@ -858,38 +858,38 @@ a:focus-visible, button:focus-visible {
 
 .mission-vision__img--1 {
   z-index: 1;
-  transform: translateX(-50%) translate(-112px, 30px) rotate(-13deg);
+  transform: translateX(-50%) translate(-72px, 30px) rotate(-9deg);
 }
 
 .mission-vision__img--2 {
   z-index: 2;
-  transform: translateX(-50%) translate(-52px, 12px) rotate(-6deg);
+  transform: translateX(-50%) translate(-38px, 18px) rotate(-5deg);
 }
 
 .mission-vision__img--3 {
   z-index: 3;
-  transform: translateX(-50%) translate(52px, 12px) rotate(6deg);
+  transform: translateX(-50%) translate(0, 8px) rotate(2deg);
 }
 
 .mission-vision__img--4 {
   z-index: 4;
-  transform: translateX(-50%) translate(0, 0) rotate(0deg);
+  transform: translateX(-50%) translate(38px, 20px) rotate(13deg);
 }
 
 .mission-vision__fan:hover .mission-vision__img--1 {
-  transform: translateX(-50%) translate(-135px, 20px) rotate(-17deg);
+  transform: translateX(-50%) translate(-92px, 22px) rotate(-12deg);
 }
 
 .mission-vision__fan:hover .mission-vision__img--2 {
-  transform: translateX(-50%) translate(-66px, 4px) rotate(-9deg);
+  transform: translateX(-50%) translate(-48px, 10px) rotate(-7deg);
 }
 
 .mission-vision__fan:hover .mission-vision__img--3 {
-  transform: translateX(-50%) translate(66px, 4px) rotate(9deg);
+  transform: translateX(-50%) translate(0, 2px) rotate(3deg);
 }
 
 .mission-vision__fan:hover .mission-vision__img--4 {
-  transform: translateX(-50%) translate(0, 0) rotate(0deg);
+  transform: translateX(-50%) translate(54px, 12px) rotate(16deg);
 }
 
 @media (max-width: 420px) {
@@ -903,35 +903,35 @@ a:focus-visible, button:focus-visible {
   }
 
   .mission-vision__img--1 {
-    transform: translateX(-50%) translate(-78px, 24px) rotate(-13deg);
+    transform: translateX(-50%) translate(-50px, 24px) rotate(-9deg);
   }
 
   .mission-vision__img--2 {
-    transform: translateX(-50%) translate(-36px, 8px) rotate(-6deg);
+    transform: translateX(-50%) translate(-28px, 14px) rotate(-5deg);
   }
 
   .mission-vision__img--3 {
-    transform: translateX(-50%) translate(36px, 8px) rotate(6deg);
+    transform: translateX(-50%) translate(0, 6px) rotate(2deg);
   }
 
   .mission-vision__img--4 {
-    transform: translateX(-50%) translate(0, 0) rotate(0deg);
+    transform: translateX(-50%) translate(28px, 16px) rotate(13deg);
   }
 
   .mission-vision__fan:hover .mission-vision__img--1 {
-    transform: translateX(-50%) translate(-94px, 16px) rotate(-17deg);
+    transform: translateX(-50%) translate(-64px, 18px) rotate(-12deg);
   }
 
   .mission-vision__fan:hover .mission-vision__img--2 {
-    transform: translateX(-50%) translate(-46px, 3px) rotate(-9deg);
+    transform: translateX(-50%) translate(-36px, 8px) rotate(-7deg);
   }
 
   .mission-vision__fan:hover .mission-vision__img--3 {
-    transform: translateX(-50%) translate(46px, 3px) rotate(9deg);
+    transform: translateX(-50%) translate(0, 2px) rotate(3deg);
   }
 
   .mission-vision__fan:hover .mission-vision__img--4 {
-    transform: translateX(-50%) translate(0, 0) rotate(0deg);
+    transform: translateX(-50%) translate(38px, 8px) rotate(16deg);
   }
 }
 
