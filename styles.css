@@ -1698,6 +1698,8 @@ a:focus-visible, button:focus-visible {
    Evidence / certificate gallery
    ========================================================================== */
 .evidence-card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--line);
   background: var(--white);
   overflow: hidden;
@@ -1736,7 +1738,12 @@ a:focus-visible, button:focus-visible {
   padding: 1rem;
 }
 
-.evidence-card__body { padding: 1.1rem 1.25rem 1.35rem; }
+.evidence-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.1rem 1.25rem 1.35rem;
+}
 
 .evidence-card__title {
   color: var(--navy);
@@ -1791,7 +1798,8 @@ a:focus-visible, button:focus-visible {
 
 .evidence-card__status + .evidence-card__link {
   display: block;
-  margin-top: .75rem;
+  margin-top: auto;
+  padding-top: .75rem;
 }
 
 /* ==========================================================================
