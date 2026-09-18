@@ -1763,6 +1763,23 @@ a:focus-visible, button:focus-visible {
 }
 .evidence-card__link:hover { color: var(--navy); }
 
+.evidence-card__status {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-top: .9rem;
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+.evidence-card__status svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.evidence-card__status--maintenance { color: #b42318; }
+
 /* ==========================================================================
    Contact / footer
    ========================================================================== */
