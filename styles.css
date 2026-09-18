@@ -1778,7 +1778,15 @@ a:focus-visible, button:focus-visible {
   flex-shrink: 0;
 }
 
-.evidence-card__status--maintenance { color: #b42318; }
+.evidence-card__status--maintenance,
+.evidence-card__status--maintenance span,
+.evidence-card__status--maintenance svg {
+  color: #dc2626 !important;
+}
+
+.evidence-card__status--maintenance svg {
+  stroke: #dc2626;
+}
 
 /* ==========================================================================
    Contact / footer
