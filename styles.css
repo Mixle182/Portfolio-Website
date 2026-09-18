@@ -1075,6 +1075,24 @@ a:focus-visible, button:focus-visible {
 
 .visit-bubble__cta svg { width: 15px; height: 15px; }
 
+.visit-bubble--beyond .visit-bubble__overlay {
+  background: linear-gradient(180deg, rgba(16, 45, 102, .18) 0%, rgba(16, 45, 102, .9) 100%);
+}
+
+.visit-bubble--beyond .visit-bubble__icon,
+.visit-bubble--beyond .visit-bubble__cta {
+  color: #f4d52b;
+}
+
+.visit-bubble--beyond .visit-bubble__cta {
+  background: rgba(16, 45, 102, .72);
+  border-color: rgba(244, 213, 43, .75);
+}
+
+.visit-bubble--beyond:hover .visit-bubble__cta {
+  background: #102d66;
+}
+
 /* ==========================================================================
    Mixle Philippines page theme — elegant, creative/photography styled showcase
    Scoped entirely to body.theme-mixle so no other page is affected
