@@ -166,6 +166,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  /* Brand Guide image fan: keep one image centered until the visitor opens it */
+  var imageFans = document.querySelectorAll(".mission-vision__fan");
+  imageFans.forEach(function (fan) {
+    function toggleFan() {
+      var isExpanded = fan.classList.toggle("is-spread");
+      fan.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+    }
+
+    fan.addEventListener("click", toggleFan);
+    fan.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggleFan();
+      }
+    });
+  });
+
   /* ------------------------------------------------------------------
      Page-load reveal: fade out the loading screen once ready
      ------------------------------------------------------------------ */

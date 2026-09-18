@@ -858,37 +858,37 @@ a:focus-visible, button:focus-visible {
 
 .mission-vision__img--1 {
   z-index: 1;
-  transform: translateX(-50%) translate(-72px, 30px) rotate(-9deg);
+  transform: translateX(-50%) translate(0, 0) rotate(0deg);
 }
 
 .mission-vision__img--2 {
   z-index: 2;
-  transform: translateX(-50%) translate(-38px, 18px) rotate(-5deg);
+  transform: translateX(-50%) translate(0, 0) rotate(0deg);
 }
 
 .mission-vision__img--3 {
   z-index: 3;
-  transform: translateX(-50%) translate(0, 8px) rotate(2deg);
+  transform: translateX(-50%) translate(0, 0) rotate(0deg);
 }
 
 .mission-vision__img--4 {
   z-index: 4;
-  transform: translateX(-50%) translate(38px, 20px) rotate(13deg);
+  transform: translateX(-50%) translate(0, 0) rotate(0deg);
 }
 
-.mission-vision__fan:hover .mission-vision__img--1 {
+.mission-vision__fan.is-spread .mission-vision__img--1 {
   transform: translateX(-50%) translate(-92px, 22px) rotate(-12deg);
 }
 
-.mission-vision__fan:hover .mission-vision__img--2 {
+.mission-vision__fan.is-spread .mission-vision__img--2 {
   transform: translateX(-50%) translate(-48px, 10px) rotate(-7deg);
 }
 
-.mission-vision__fan:hover .mission-vision__img--3 {
+.mission-vision__fan.is-spread .mission-vision__img--3 {
   transform: translateX(-50%) translate(0, 2px) rotate(3deg);
 }
 
-.mission-vision__fan:hover .mission-vision__img--4 {
+.mission-vision__fan.is-spread .mission-vision__img--4 {
   transform: translateX(-50%) translate(54px, 12px) rotate(16deg);
 }
 
@@ -903,15 +903,15 @@ a:focus-visible, button:focus-visible {
   }
 
   .mission-vision__img--1 {
-    transform: translateX(-50%) translate(-50px, 24px) rotate(-9deg);
+    transform: translateX(-50%) translate(0, 0) rotate(0deg);
   }
 
   .mission-vision__img--2 {
-    transform: translateX(-50%) translate(-28px, 14px) rotate(-5deg);
+    transform: translateX(-50%) translate(0, 0) rotate(0deg);
   }
 
   .mission-vision__img--3 {
-    transform: translateX(-50%) translate(0, 6px) rotate(2deg);
+    transform: translateX(-50%) translate(0, 0) rotate(0deg);
   }
 
   .mission-vision__img--4 {
@@ -949,11 +949,9 @@ a:focus-visible, button:focus-visible {
 .visit-bubble {
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: center;
   gap: .5rem;
-  max-width: 100%;
   width: 100%;
   min-height: 320px;
   justify-content: center;
