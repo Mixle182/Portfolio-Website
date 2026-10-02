@@ -2504,7 +2504,7 @@ a:focus-visible, button:focus-visible {
   --line: rgba(255, 45, 85, .26);
   --navy: var(--page-bg);
   --blue: var(--secondary);
-  --white: var(--panel-bg);
+  --white: #fffafc;
   --soft-blue: rgba(45, 227, 255, .12);
   --contact-muted: #8feeff;
   --contact-body: #d7f8ff;
