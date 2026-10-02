@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(function () {
       window.location.href = href;
-    }, 120);
+    }, 220);
   });
 
 });

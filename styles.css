@@ -135,7 +135,7 @@ a:focus-visible, button:focus-visible {
   justify-content: center;
   gap: .9rem;
   background: var(--page-loader-bg, var(--paper));
-  transition: opacity .5s ease, background .45s ease;
+  transition: opacity .7s ease, background .9s ease;
 }
 
 .page-loader--hidden {
@@ -148,7 +148,7 @@ a:focus-visible, button:focus-visible {
   height: 56px;
   object-fit: contain;
   filter: var(--page-loader-logo-filter, brightness(0) saturate(100%));
-  transition: filter .45s ease, opacity .3s ease, transform .45s ease;
+  transition: filter .9s ease, opacity .5s ease, transform .9s ease;
   animation: page-loader-logo-pulse 1.4s ease-in-out infinite;
 }
 
@@ -196,7 +196,7 @@ a:focus-visible, button:focus-visible {
   width: 40%;
   height: 100%;
   background: var(--page-loader-accent, var(--blue));
-  transition: background .45s ease;
+  transition: background 1s ease;
   animation: page-loader-sweep 1s ease-in-out infinite;
 }
 
@@ -216,8 +216,9 @@ a:focus-visible, button:focus-visible {
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--page-transition-from, var(--paper)), var(--page-transition-to, var(--paper)));
+  background-size: 200% 200%;
   opacity: 0;
-  transition: opacity .3s ease, background .55s ease;
+  transition: opacity .55s ease, background .9s ease;
 }
 
 .page-transition--visible { opacity: 1; }
@@ -1096,33 +1097,21 @@ a:focus-visible, button:focus-visible {
   overflow: hidden;
 }
 
-.visit-bubble--beyond .visit-bubble__overlay::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0;
-  background-image: linear-gradient(#00ff66 0 0), linear-gradient(#ff00c8 0 0), linear-gradient(#00d9ff 0 0), linear-gradient(#00ff66 0 0), linear-gradient(#ff00c8 0 0), linear-gradient(#00d9ff 0 0), linear-gradient(#ff00c8 0 0), linear-gradient(#00ff66 0 0), linear-gradient(#00d9ff 0 0), linear-gradient(#ff00c8 0 0), linear-gradient(#00ff66 0 0), linear-gradient(#00d9ff 0 0), linear-gradient(rgba(255, 255, 255, .75) 0 0);
-  background-repeat: no-repeat;
-  background-size: 17% 5px, 24% 3px, 13% 7px, 31% 4px, 19% 6px, 26% 3px, 15% 5px, 21% 3px, 34% 4px, 12% 6px, 28% 3px, 18% 5px, 100% 1px;
-  background-position: 3% 12%, 27% 19%, 64% 26%, 48% 36%, 8% 43%, 71% 51%, 33% 59%, 59% 67%, 12% 74%, 76% 81%, 39% 88%, 4% 95%, 0 50%;
-  mix-blend-mode: screen;
-}
-
+.visit-bubble--beyond .visit-bubble__overlay::after,
 .visit-bubble--beyond .visit-bubble__overlay::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 1;
   pointer-events: none;
   opacity: 0;
-  background: repeating-linear-gradient(0deg, rgba(0, 255, 80, .28) 0 1px, transparent 1px 4px), repeating-linear-gradient(90deg, transparent 0 31px, rgba(0, 220, 255, .16) 32px, transparent 34px);
-  mix-blend-mode: screen;
+  background: none;
+  mix-blend-mode: normal;
 }
 
 .visit-bubble--beyond:hover .visit-bubble__overlay::before,
 .visit-bubble--beyond:focus-visible .visit-bubble__overlay::before {
-  animation: beyond-scanlines 5s steps(1, end) both;
+  animation: none;
+  opacity: 0;
 }
 
 @keyframes beyond-scanlines {
@@ -1149,11 +1138,11 @@ a:focus-visible, button:focus-visible {
 }
 
 .visit-bubble--beyond .visit-bubble__cta {
-  background: rgba(45, 227, 255, .16);
-  border-color: rgba(45, 227, 255, .8);
-  color: #2de3ff;
-  box-shadow: 0 0 16px rgba(45, 227, 255, .2);
-  transition: color .2s steps(4, end), background .2s steps(4, end), border-color .2s steps(4, end), box-shadow .2s ease, transform .2s steps(4, end);
+  background: rgba(255, 45, 85, .08);
+  border-color: rgba(255, 45, 85, .7);
+  color: #ff4a74;
+  box-shadow: none;
+  transition: color .2s ease, background .2s ease, border-color .2s ease, transform .2s ease;
 }
 
 .visit-bubble--beyond:hover,
@@ -1199,11 +1188,11 @@ a:focus-visible, button:focus-visible {
 
 .visit-bubble--beyond:hover .visit-bubble__cta,
 .visit-bubble--beyond:focus-visible .visit-bubble__cta {
-  background: rgba(255, 45, 85, .24);
+  background: rgba(255, 45, 85, .12);
   border-color: #ff2d55;
-  color: #fff3f6;
-  box-shadow: 0 0 18px rgba(255, 45, 85, .52), inset 0 0 12px rgba(255, 45, 85, .16);
-  transform: translateY(-2px) scale(1.05);
+  color: #ff6d8f;
+  box-shadow: none;
+  transform: none;
 }
 
 @keyframes beyond-pixel-pop {
