@@ -184,22 +184,42 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* ------------------------------------------------------------------
-     Page-load reveal: fade out the loading screen once ready
+     Page-load reveal: fade out the loading screen once ready.
+     On browser back/forward, skip the loader so the restored page appears
+     immediately instead of waiting through the loading animation.
      ------------------------------------------------------------------ */
   var loader = document.getElementById("pageLoader");
-  if (loader) {
-    window.requestAnimationFrame(function () {
-      setTimeout(function () {
-        loader.classList.add("page-loader--hidden");
-        setTimeout(function () {
-          loader.remove();
-        }, 500);
-      }, 250);
-    });
+  var navType = window.performance && performance.getEntriesByType("navigation")[0]
+    ? performance.getEntriesByType("navigation")[0].type
+    : "navigate";
+
+  function hideLoader() {
+    if (!loader) return;
+    loader.classList.add("page-loader--hidden");
+    setTimeout(function () {
+      loader.remove();
+    }, 180);
   }
 
+  if (loader) {
+    if (navType === "back_forward") {
+      hideLoader();
+    } else {
+      window.requestAnimationFrame(function () {
+        setTimeout(hideLoader, 180);
+      });
+    }
+  }
+
+  window.addEventListener("pageshow", function (event) {
+    if (event.persisted || performance.getEntriesByType("navigation")[0]?.type === "back_forward") {
+      if (loader) hideLoader();
+    }
+  });
+
   /* ------------------------------------------------------------------
-     Page-transition animation: fade out before navigating away
+     Page-transition animation: fade out before navigating away.
+     Skips the artificial delay for browser back/forward navigation.
      ------------------------------------------------------------------ */
   document.addEventListener("click", function (e) {
     var link = e.target.closest("a");
@@ -215,7 +235,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (isSamePageAnchor || isExternal || opensNewTab) return;
 
-    // Internal navigation to another page (index.html or others.html, with or without an anchor)
+    // Keep the page transition for normal internal navigation, but avoid
+    // slowing down browser history restores.
     e.preventDefault();
     var overlay = document.createElement("div");
     overlay.className = "page-transition";
@@ -228,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(function () {
       window.location.href = href;
-    }, 320);
+    }, 120);
   });
 
 });
