@@ -2487,3 +2487,228 @@ a:focus-visible, button:focus-visible {
     max-width: 390px;
   }
 }
+
+/* ==========================================================================
+   Beyond Information page theme — crimson & cyber blue
+   ========================================================================== */
+.theme-crimson-cyber {
+  --accent: #ff2d55;
+  --secondary: #2de3ff;
+  --page-bg: #160a14;
+  --panel-bg: #1d1019;
+  --panel-elevated: #220f1b;
+  --ink: #f8edf3;
+  --muted: #d9b7c5;
+  --muted-dark: #f2d9e5;
+  --paper: var(--page-bg);
+  --line: rgba(255, 45, 85, .26);
+  --navy: var(--page-bg);
+  --blue: var(--secondary);
+  --white: var(--panel-bg);
+  --soft-blue: rgba(45, 227, 255, .12);
+  --contact-muted: #8feeff;
+  --contact-body: #d7f8ff;
+  background: var(--page-bg);
+  color: var(--ink);
+}
+
+.theme-crimson-cyber .site-header,
+.theme-crimson-cyber .nav-menu,
+.theme-crimson-cyber .site-footer,
+.theme-crimson-cyber .contact-section {
+  background: var(--page-bg);
+}
+
+.theme-crimson-cyber .site-header {
+  border-bottom-color: var(--line);
+}
+
+.theme-crimson-cyber .site-footer {
+  border-top-color: var(--line);
+}
+
+.theme-crimson-cyber .page-loader {
+  background: var(--page-bg);
+}
+
+.theme-crimson-cyber .page-loader__mark,
+.theme-crimson-cyber .brand-name,
+.theme-crimson-cyber .heading-lg,
+.theme-crimson-cyber .heading-hero,
+.theme-crimson-cyber .heading-card,
+.theme-crimson-cyber .detail-card__title,
+.theme-crimson-cyber .tool-card__name,
+.theme-crimson-cyber .evidence-card__title,
+.theme-crimson-cyber .contact-panel__title,
+.theme-crimson-cyber .contact-heading {
+  color: var(--ink);
+}
+
+.theme-crimson-cyber .page-loader__bar {
+  background: rgba(255, 255, 255, .08);
+}
+
+.theme-crimson-cyber .page-loader__bar::after {
+  background: var(--accent);
+}
+
+.theme-crimson-cyber .page-loader__logo,
+.theme-crimson-cyber .brand-logo {
+  filter: invert(1);
+}
+
+.theme-crimson-cyber .brand-role,
+.theme-crimson-cyber .text-body,
+.theme-crimson-cyber .text-small,
+.theme-crimson-cyber .text-tiny-strong,
+.theme-crimson-cyber .detail-card__desc,
+.theme-crimson-cyber .contact-panel__desc,
+.theme-crimson-cyber .contact-form__note,
+.theme-crimson-cyber .contact-form__label,
+.theme-crimson-cyber .footer-copy,
+.theme-crimson-cyber .nav-item,
+.theme-crimson-cyber .resume-entry__org,
+.theme-crimson-cyber .evidence-card__meta {
+  color: var(--muted);
+}
+
+.theme-crimson-cyber .eyebrow,
+.theme-crimson-cyber .text-period,
+.theme-crimson-cyber .project-card__tag,
+.theme-crimson-cyber .detail-card__meta,
+.theme-crimson-cyber .footer-link,
+.theme-crimson-cyber .showcase-back,
+.theme-crimson-cyber .evidence-card__link,
+.theme-crimson-cyber .nav-item:hover,
+.theme-crimson-cyber .nav-item--active,
+.theme-crimson-cyber .btn--primary {
+  color: var(--accent);
+}
+
+.theme-crimson-cyber .hero-role,
+.theme-crimson-cyber .contact-grid__icon,
+.theme-crimson-cyber .tool-card__icon,
+.theme-crimson-cyber .detail-card__icon-wrap,
+.theme-crimson-cyber .reference-card__contact svg {
+  color: var(--secondary);
+}
+
+.theme-crimson-cyber .resume-section,
+.theme-crimson-cyber .nav-item,
+.theme-crimson-cyber .nav-toggle,
+.theme-crimson-cyber .project-card,
+.theme-crimson-cyber .detail-card,
+.theme-crimson-cyber .tool-card,
+.theme-crimson-cyber .info-card,
+.theme-crimson-cyber .reference-card,
+.theme-crimson-cyber .evidence-card,
+.theme-crimson-cyber .contact-form__input,
+.theme-crimson-cyber .contact-panel,
+.theme-crimson-cyber .contact-form__textarea {
+  border-color: var(--line);
+}
+
+.theme-crimson-cyber .nav-item {
+  color: #f0d4df;
+  border-bottom-color: rgba(255, 45, 85, .18);
+}
+
+.theme-crimson-cyber .nav-toggle {
+  border-color: rgba(255, 45, 85, .3);
+  color: var(--ink);
+}
+
+.theme-crimson-cyber .nav-item:hover,
+.theme-crimson-cyber .nav-item--active {
+  color: var(--accent);
+}
+
+.theme-crimson-cyber .project-card,
+.theme-crimson-cyber .detail-card,
+.theme-crimson-cyber .tool-card,
+.theme-crimson-cyber .info-card,
+.theme-crimson-cyber .reference-card,
+.theme-crimson-cyber .evidence-card,
+.theme-crimson-cyber .contact-panel,
+.theme-crimson-cyber .contact-form__input {
+  background: rgba(33, 16, 25, .96);
+  box-shadow: 0 20px 38px -28px rgba(255, 45, 85, .36);
+}
+
+.theme-crimson-cyber .project-card,
+.theme-crimson-cyber .detail-card,
+.theme-crimson-cyber .reference-card {
+  border-left-color: var(--accent);
+}
+
+.theme-crimson-cyber .tool-card {
+  border-top-color: var(--accent);
+  border-left-color: rgba(255, 45, 85, .24);
+}
+
+.theme-crimson-cyber .project-card__tag,
+.theme-crimson-cyber .detail-card__icon-wrap,
+.theme-crimson-cyber .evidence-card__placeholder,
+.theme-crimson-cyber .btn--primary {
+  background: rgba(255, 45, 85, .12);
+}
+
+.theme-crimson-cyber .btn--primary {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.theme-crimson-cyber .btn--primary:hover {
+  opacity: .92;
+}
+
+.theme-crimson-cyber .contact-section {
+  background: linear-gradient(180deg, var(--page-bg) 0%, #12070d 100%);
+}
+
+.theme-crimson-cyber .contact-form__input {
+  color: var(--ink);
+  background: rgba(15, 8, 13, .9);
+}
+
+.theme-crimson-cyber .contact-form__input:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(45, 227, 255, .12);
+}
+
+.theme-crimson-cyber .contact-form__note,
+.theme-crimson-cyber .contact-copy,
+.theme-crimson-cyber .brand-role,
+.theme-crimson-cyber .footer-copy {
+  color: #e8cad7;
+}
+
+.theme-crimson-cyber .detail-card__icon-wrap svg,
+.theme-crimson-cyber .tool-card__icon svg,
+.theme-crimson-cyber .reference-card__contact svg {
+  color: var(--secondary);
+}
+
+.theme-crimson-cyber .evidence-card:hover {
+  box-shadow: 0 24px 40px -26px rgba(45, 227, 255, .28);
+}
+
+.theme-crimson-cyber .evidence-card__link:hover,
+.theme-crimson-cyber .showcase-back:hover,
+.theme-crimson-cyber .footer-link:hover,
+.theme-crimson-cyber .nav-item:hover {
+  color: var(--secondary);
+}
+
+.theme-crimson-cyber .nav-item:hover,
+.theme-crimson-cyber .nav-item--active {
+  text-shadow: 0 0 18px rgba(45, 227, 255, .45);
+}
+
+@media (max-width: 1039px) {
+  .theme-crimson-cyber .nav-menu {
+    background: var(--page-bg);
+    border-top-color: var(--line);
+    box-shadow: 0 18px 30px -18px rgba(255, 45, 85, .3);
+  }
+}
