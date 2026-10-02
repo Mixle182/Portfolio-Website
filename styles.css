@@ -2631,7 +2631,7 @@ a:focus-visible, button:focus-visible {
    ========================================================================== */
 body.theme-crimson-cyber {
   --accent: #ff2d55;
-  --secondary: #2de3ff;
+  --secondary: #f4b4c6;
   --page-bg: #160a14;
   --panel-bg: #1d1019;
   --panel-elevated: #220f1b;
@@ -2643,9 +2643,9 @@ body.theme-crimson-cyber {
   --navy: var(--page-bg);
   --blue: var(--secondary);
   --white: #fffafc;
-  --soft-blue: rgba(45, 227, 255, .12);
-  --contact-muted: #8feeff;
-  --contact-body: #d7f8ff;
+  --soft-blue: rgba(255, 45, 85, .12);
+  --contact-muted: #f3d7e1;
+  --contact-body: #f8e7ee;
   background: var(--page-bg) !important;
   color: var(--ink) !important;
 }
@@ -2710,7 +2710,7 @@ body.theme-crimson-cyber .tool-card__icon,
 body.theme-crimson-cyber .detail-card__icon-wrap,
 body.theme-crimson-cyber .reference-card__contact svg,
 body.theme-crimson-cyber .page-loader__dot {
-  color: var(--secondary) !important;
+  color: var(--accent) !important;
 }
 
 body.theme-crimson-cyber .eyebrow,
@@ -2768,8 +2768,8 @@ body.theme-crimson-cyber .contact-form__input {
 }
 
 body.theme-crimson-cyber .contact-form__input:focus {
-  border-color: var(--secondary) !important;
-  box-shadow: 0 0 0 3px rgba(45, 227, 255, .12);
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(255, 45, 85, .12);
 }
 
 body.theme-crimson-cyber .contact-form__note,
@@ -2782,23 +2782,23 @@ body.theme-crimson-cyber .footer-copy {
 body.theme-crimson-cyber .detail-card__icon-wrap svg,
 body.theme-crimson-cyber .tool-card__icon svg,
 body.theme-crimson-cyber .reference-card__contact svg {
-  color: var(--secondary);
+  color: var(--accent);
 }
 
 body.theme-crimson-cyber .evidence-card:hover {
-  box-shadow: 0 24px 40px -26px rgba(45, 227, 255, .28);
+  box-shadow: 0 24px 40px -26px rgba(255, 45, 85, .25);
 }
 
 body.theme-crimson-cyber .evidence-card__link:hover,
 body.theme-crimson-cyber .showcase-back:hover,
 body.theme-crimson-cyber .footer-link:hover,
 body.theme-crimson-cyber .nav-item:hover {
-  color: var(--secondary);
+  color: var(--accent);
 }
 
 body.theme-crimson-cyber .nav-item:hover,
 body.theme-crimson-cyber .nav-item--active {
-  text-shadow: 0 0 18px rgba(45, 227, 255, .45);
+  text-shadow: 0 0 18px rgba(255, 45, 85, .35);
 }
 
 @media (max-width: 1039px) {
