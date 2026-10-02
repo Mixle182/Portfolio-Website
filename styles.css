@@ -1159,7 +1159,8 @@ a:focus-visible, button:focus-visible {
 
 .visit-bubble--beyond:hover .visit-bubble__overlay::after,
 .visit-bubble--beyond:focus-visible .visit-bubble__overlay::after {
-  animation: beyond-glitch 5s steps(1, end) both;
+  animation: none;
+  opacity: 0;
 }
 
 @keyframes beyond-glitch {
