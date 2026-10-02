@@ -2491,7 +2491,7 @@ a:focus-visible, button:focus-visible {
 /* ==========================================================================
    Beyond Information page theme — crimson & cyber blue
    ========================================================================== */
-.theme-crimson-cyber {
+body.theme-crimson-cyber {
   --accent: #ff2d55;
   --secondary: #2de3ff;
   --page-bg: #160a14;
@@ -2508,15 +2508,189 @@ a:focus-visible, button:focus-visible {
   --soft-blue: rgba(45, 227, 255, .12);
   --contact-muted: #8feeff;
   --contact-body: #d7f8ff;
+  background: var(--page-bg) !important;
+  color: var(--ink) !important;
+}
+
+body.theme-crimson-cyber .app-wrapper,
+body.theme-crimson-cyber main,
+body.theme-crimson-cyber .site-header,
+body.theme-crimson-cyber .nav-menu,
+body.theme-crimson-cyber .site-footer,
+body.theme-crimson-cyber .contact-section {
   background: var(--page-bg);
+}
+
+body.theme-crimson-cyber .resume-section {
+  border-top-color: var(--line);
+}
+
+body.theme-crimson-cyber .project-card,
+body.theme-crimson-cyber .detail-card,
+body.theme-crimson-cyber .tool-card,
+body.theme-crimson-cyber .info-card,
+body.theme-crimson-cyber .reference-card,
+body.theme-crimson-cyber .evidence-card,
+body.theme-crimson-cyber .contact-panel,
+body.theme-crimson-cyber .contact-form__input {
+  background: rgba(33, 16, 25, .96) !important;
+  border-color: var(--line) !important;
   color: var(--ink);
 }
 
-.theme-crimson-cyber .site-header,
-.theme-crimson-cyber .nav-menu,
-.theme-crimson-cyber .site-footer,
-.theme-crimson-cyber .contact-section {
+body.theme-crimson-cyber .eyebrow,
+body.theme-crimson-cyber .heading-lg,
+body.theme-crimson-cyber .heading-hero,
+body.theme-crimson-cyber .heading-card,
+body.theme-crimson-cyber .detail-card__title,
+body.theme-crimson-cyber .tool-card__name,
+body.theme-crimson-cyber .evidence-card__title,
+body.theme-crimson-cyber .contact-panel__title,
+body.theme-crimson-cyber .contact-heading,
+body.theme-crimson-cyber .brand-name,
+body.theme-crimson-cyber .page-loader__mark {
+  color: var(--ink) !important;
+}
+
+body.theme-crimson-cyber .text-body,
+body.theme-crimson-cyber .text-small,
+body.theme-crimson-cyber .text-tiny-strong,
+body.theme-crimson-cyber .detail-card__desc,
+body.theme-crimson-cyber .contact-panel__desc,
+body.theme-crimson-cyber .contact-form__note,
+body.theme-crimson-cyber .contact-form__label,
+body.theme-crimson-cyber .footer-copy,
+body.theme-crimson-cyber .resume-entry__org,
+body.theme-crimson-cyber .evidence-card__meta,
+body.theme-crimson-cyber .brand-role {
+  color: var(--muted) !important;
+}
+
+body.theme-crimson-cyber .hero-role,
+body.theme-crimson-cyber .contact-grid__icon,
+body.theme-crimson-cyber .tool-card__icon,
+body.theme-crimson-cyber .detail-card__icon-wrap,
+body.theme-crimson-cyber .reference-card__contact svg,
+body.theme-crimson-cyber .page-loader__dot {
+  color: var(--secondary) !important;
+}
+
+body.theme-crimson-cyber .eyebrow,
+body.theme-crimson-cyber .text-period,
+body.theme-crimson-cyber .project-card__tag,
+body.theme-crimson-cyber .detail-card__meta,
+body.theme-crimson-cyber .footer-link,
+body.theme-crimson-cyber .showcase-back,
+body.theme-crimson-cyber .evidence-card__link,
+body.theme-crimson-cyber .nav-item:hover,
+body.theme-crimson-cyber .nav-item--active {
+  color: var(--accent) !important;
+}
+
+body.theme-crimson-cyber .project-card,
+body.theme-crimson-cyber .detail-card,
+body.theme-crimson-cyber .reference-card {
+  border-left-color: var(--accent) !important;
+}
+
+body.theme-crimson-cyber .tool-card {
+  border-top-color: var(--accent) !important;
+}
+
+body.theme-crimson-cyber .project-card__tag,
+body.theme-crimson-cyber .detail-card__icon-wrap,
+body.theme-crimson-cyber .evidence-card__placeholder,
+body.theme-crimson-cyber .btn--primary,
+body.theme-crimson-cyber .page-loader__bar::after {
+  background: rgba(255, 45, 85, .12) !important;
+}
+
+body.theme-crimson-cyber .btn--primary {
+  background: var(--accent) !important;
+  color: #fff !important;
+}
+
+body.theme-crimson-cyber .nav-item {
+  color: #f0d4df !important;
+  border-bottom-color: rgba(255, 45, 85, .18) !important;
+}
+
+body.theme-crimson-cyber .nav-toggle {
+  border-color: rgba(255, 45, 85, .3) !important;
+  color: var(--ink) !important;
+}
+
+body.theme-crimson-cyber .contact-section {
+  background: linear-gradient(180deg, #160a14 0%, #12070d 100%) !important;
+}
+
+body.theme-crimson-cyber .contact-form__input {
+  color: var(--ink) !important;
+  background: rgba(15, 8, 13, .9) !important;
+}
+
+body.theme-crimson-cyber .contact-form__input:focus {
+  border-color: var(--secondary) !important;
+  box-shadow: 0 0 0 3px rgba(45, 227, 255, .12);
+}
+
+body.theme-crimson-cyber .page-loader {
+  background: var(--page-bg) !important;
+}
+
+body.theme-crimson-cyber .page-loader__bar {
+  background: rgba(255, 255, 255, .08) !important;
+}
+
+body.theme-crimson-cyber .page-loader__logo,
+body.theme-crimson-cyber .brand-logo {
+  filter: invert(1);
+}
+
+body.theme-crimson-cyber .nav-item:hover,
+body.theme-crimson-cyber .nav-item--active,
+body.theme-crimson-cyber .footer-link:hover,
+body.theme-crimson-cyber .evidence-card__link:hover,
+body.theme-crimson-cyber .showcase-back:hover {
+  color: var(--secondary) !important;
+}
+
+body.theme-crimson-cyber .evidence-card:hover {
+  box-shadow: 0 24px 40px -26px rgba(45, 227, 255, .28);
+}
+
+body.theme-crimson-cyber .site-header,
+body.theme-crimson-cyber .nav-menu,
+body.theme-crimson-cyber .site-footer {
   background: var(--page-bg);
+}
+
+body.theme-crimson-cyber .site-header {
+  border-bottom-color: var(--line);
+}
+
+body.theme-crimson-cyber .site-footer {
+  border-top-color: var(--line);
+}
+
+body.theme-crimson-cyber .nav-menu {
+  box-shadow: 0 18px 30px -18px rgba(255, 45, 85, .3);
+}
+
+body.theme-crimson-cyber .page-loader__bar::after {
+  background: var(--accent);
+}
+
+body.theme-crimson-cyber .nav-item:hover,
+body.theme-crimson-cyber .nav-item--active {
+  text-shadow: 0 0 18px rgba(45, 227, 255, .45);
+}
+
+@media (max-width: 1039px) {
+  body.theme-crimson-cyber .nav-menu {
+    background: var(--page-bg);
+    border-top-color: var(--line);
+  }
 }
 
 .theme-crimson-cyber .site-header {
