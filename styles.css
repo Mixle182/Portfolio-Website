@@ -2,17 +2,18 @@
    Variables
    ========================================================================== */
 :root {
-  --navy: #183153;
-  --blue: #285d8f;
-  --ink: #1f2937;
-  --muted: #5f6b7a;
-  --muted-dark: #3f4b59;
-  --paper: #f7f8fa;
-  --line: #d5dbe3;
-  --white: #ffffff;
-  --soft-blue: #eaf1f8;
-  --contact-muted: #b9d2e8;
-  --contact-body: #dce7f1;
+  --navy: #0b0f1a;
+  --blue: #00d9ff;
+  --ink: #eafaff;
+  --muted: #9bb8d0;
+  --muted-dark: #cfe7f7;
+  --paper: #0b0f1a;
+  --line: rgba(0, 217, 255, .24);
+  --white: #ebf8ff;
+  --soft-blue: rgba(0, 217, 255, .12);
+  --contact-muted: #9feaff;
+  --contact-body: #dbf6ff;
+  --steel-panel: #1e3a5f;
 }
 
 /* ==========================================================================
@@ -24,7 +25,9 @@ body {
   width: 100%;
   margin: 0;
   color: var(--ink);
-  background: var(--paper);
+  background:
+    radial-gradient(circle at top, rgba(0, 217, 255, .12), transparent 36%),
+    linear-gradient(180deg, #0b0f1a 0%, #111a2a 100%);
   font-family: "DM Sans", sans-serif;
   overflow-x: hidden;
 }
@@ -67,7 +70,7 @@ a:focus-visible, button:focus-visible {
 .eyebrow--light { color: var(--contact-muted); }
 
 .heading-lg {
-  color: var(--navy);
+  color: var(--ink);
   font-weight: 700;
   letter-spacing: -.025em;
   line-height: 1.15;
@@ -75,14 +78,14 @@ a:focus-visible, button:focus-visible {
 }
 
 .heading-hero {
-  color: var(--navy);
+  color: var(--ink);
   font-weight: 700;
   line-height: 1.2;
   font-size: 2rem;
 }
 
 .heading-card {
-  color: var(--navy);
+  color: var(--ink);
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.4;
@@ -153,7 +156,7 @@ a:focus-visible, button:focus-visible {
   display: flex;
   align-items: center;
   gap: .15rem;
-  color: var(--navy);
+  color: var(--ink);
   font-weight: 700;
   font-size: .95rem;
   letter-spacing: .02em;
@@ -279,7 +282,7 @@ a:focus-visible, button:focus-visible {
 .site-header {
   width: 100%;
   border-bottom: 1px solid var(--line);
-  background: var(--white);
+  background: rgba(11, 15, 26, .82);
 }
 
 .nav-bar {
@@ -325,7 +328,7 @@ a:focus-visible, button:focus-visible {
 .brand-text { display: block; min-width: 0; }
 
 .brand-name {
-  color: var(--navy);
+  color: var(--ink);
   font-size: clamp(.82rem, 3.2vw, 1rem);
   font-weight: 700;
   letter-spacing: -.01em;
@@ -356,7 +359,7 @@ a:focus-visible, button:focus-visible {
   flex-shrink: 0;
   background: transparent;
   border: 1px solid var(--line);
-  color: var(--navy);
+  color: var(--ink);
   cursor: pointer;
 }
 
@@ -376,9 +379,9 @@ a:focus-visible, button:focus-visible {
   right: 0;
   z-index: 60;
   flex-direction: column;
-  background: var(--white);
+  background: rgba(11, 15, 26, .88);
   border-top: 1px solid var(--line);
-  box-shadow: 0 16px 28px -12px rgba(24, 49, 83, .22);
+  box-shadow: 0 16px 28px -12px rgba(0, 217, 255, .16);
   max-height: calc(100vh - 64px);
   overflow-y: auto;
 }
@@ -395,8 +398,8 @@ a:focus-visible, button:focus-visible {
   border-bottom: 1px solid var(--line);
 }
 .nav-item:last-child { border-bottom: none; }
-.nav-item:hover { color: var(--navy); }
-.nav-item--active { color: var(--navy); }
+.nav-item:hover { color: var(--blue); }
+.nav-item--active { color: var(--blue); }
 
 /* Desktop: full single-line bar, no hamburger, no dropdown styling */
 @media (min-width: 1040px) {
@@ -454,7 +457,7 @@ a:focus-visible, button:focus-visible {
 }
 .btn:hover { opacity: .9; }
 
-.btn--primary { background: var(--navy); color: var(--white); }
+.btn--primary { background: var(--blue); color: #06131b; }
 .btn--inverse { background: var(--white); color: var(--navy); }
 
 /* ==========================================================================
@@ -514,7 +517,7 @@ a:focus-visible, button:focus-visible {
 .project-card {
   border: 1px solid var(--line);
   border-left: 3px solid var(--blue);
-  background: var(--white);
+  background: rgba(30, 58, 95, .78);
   padding: 1.5rem;
 }
 
@@ -1076,21 +1079,23 @@ a:focus-visible, button:focus-visible {
 .visit-bubble__cta svg { width: 15px; height: 15px; }
 
 .visit-bubble--beyond .visit-bubble__overlay {
-  background: linear-gradient(180deg, rgba(24, 49, 83, .18) 0%, rgba(24, 49, 83, .92) 100%);
+  background: linear-gradient(180deg, rgba(22, 10, 20, .2) 0%, rgba(22, 10, 20, .9) 100%);
 }
 
-.visit-bubble--beyond .visit-bubble__icon,
+.visit-bubble--beyond .visit-bubble__title,
+.visit-bubble--beyond .visit-bubble__desc,
 .visit-bubble--beyond .visit-bubble__cta {
-  color: var(--white);
+  color: #f7edf3;
 }
 
 .visit-bubble--beyond .visit-bubble__cta {
-  background: rgba(40, 93, 143, .85);
-  border-color: rgba(255, 255, 255, .7);
+  background: rgba(255, 45, 85, .18);
+  border-color: rgba(45, 227, 255, .7);
+  color: #2de3ff;
 }
 
 .visit-bubble--beyond:hover .visit-bubble__cta {
-  background: var(--navy);
+  background: rgba(255, 45, 85, .28);
 }
 
 /* ==========================================================================
@@ -1565,7 +1570,7 @@ a:focus-visible, button:focus-visible {
   gap: .9rem;
   border: 1px solid var(--line);
   border-left: 3px solid var(--blue);
-  background: var(--white);
+  background: rgba(30, 58, 95, .72);
   padding: 1.25rem 1.4rem;
 }
 
@@ -1583,7 +1588,7 @@ a:focus-visible, button:focus-visible {
 .detail-card__icon-wrap svg { width: 19px; height: 19px; }
 
 .detail-card__title {
-  color: var(--navy);
+  color: var(--ink);
   font-weight: 700;
   font-size: .95rem;
   line-height: 1.4;
@@ -1616,7 +1621,7 @@ a:focus-visible, button:focus-visible {
   gap: .6rem;
   border: 1px solid var(--line);
   border-top: 3px solid var(--blue);
-  background: var(--white);
+  background: rgba(30, 58, 95, .7);
   padding: 1.5rem 1rem;
   text-align: center;
 }
@@ -1628,7 +1633,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .tool-card__name {
-  color: var(--navy);
+  color: var(--ink);
   font-size: .85rem;
   font-weight: 700;
 }
@@ -1764,7 +1769,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .evidence-card__title {
-  color: var(--navy);
+  color: var(--ink);
   font-weight: 700;
   font-size: .95rem;
   line-height: 1.4;
@@ -1825,7 +1830,7 @@ a:focus-visible, button:focus-visible {
    ========================================================================== */
 .contact-section {
   width: 100%;
-  background: var(--navy);
+  background: linear-gradient(180deg, #0b0f1a 0%, #111d2d 100%);
 }
 
 .contact-heading {
@@ -1849,12 +1854,12 @@ a:focus-visible, button:focus-visible {
    Contact panel — resume request form
    ========================================================================== */
 .contact-panel {
-  background: var(--white);
+  background: rgba(30, 58, 95, .72);
   padding: 1.75rem;
 }
 
 .contact-panel__title {
-  color: var(--navy);
+  color: var(--ink);
   font-weight: 700;
   font-size: 1.05rem;
 }
