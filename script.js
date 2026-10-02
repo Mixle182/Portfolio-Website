@@ -238,8 +238,28 @@ document.addEventListener("DOMContentLoaded", function () {
     // Keep the page transition for normal internal navigation, but avoid
     // slowing down browser history restores.
     e.preventDefault();
+
+    var themeMap = {
+      "index.html": { bg: "#0b0f1a", accent: "#00d9ff" },
+      "others.html": { bg: "#160a14", accent: "#ff2d55" },
+      "digital-work-news-website.html": { bg: "#0c3049", accent: "#dd9a35" },
+      "digital-work-mixle.html": { bg: "#17171a", accent: "#ef7d8a" },
+      "digital-work-scamester.html": { bg: "#0b0f14", accent: "#4ee6c2" },
+      "digital-work-brand-guide.html": { bg: "#0c3049", accent: "#dd9a35" }
+    };
+
+    function resolveTheme(hrefValue) {
+      var page = hrefValue.split("?")[0].split("#")[0].split("/").pop() || "index.html";
+      return themeMap[page] || { bg: getComputedStyle(document.body).backgroundColor || "#0b0f1a", accent: getComputedStyle(document.documentElement).getPropertyValue("--page-loader-accent") || "#00d9ff" };
+    }
+
+    var currentTheme = resolveTheme(window.location.pathname || "index.html");
+    var nextTheme = resolveTheme(href);
     var overlay = document.createElement("div");
     overlay.className = "page-transition";
+    overlay.style.setProperty("--page-transition-from", currentTheme.bg);
+    overlay.style.setProperty("--page-transition-to", nextTheme.bg);
+    overlay.style.setProperty("--page-transition-accent", nextTheme.accent);
     overlay.innerHTML = '<div class="page-transition__spinner"></div>';
     document.body.appendChild(overlay);
 

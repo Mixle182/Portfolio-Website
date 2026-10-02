@@ -14,6 +14,9 @@
   --contact-muted: #9feaff;
   --contact-body: #dbf6ff;
   --steel-panel: #1e3a5f;
+  --page-loader-bg: #0b0f1a;
+  --page-loader-accent: #00d9ff;
+  --page-loader-logo-filter: brightness(0) saturate(100%) sepia(1) saturate(10) hue-rotate(190deg) brightness(1.15);
 }
 
 /* ==========================================================================
@@ -131,8 +134,8 @@ a:focus-visible, button:focus-visible {
   align-items: center;
   justify-content: center;
   gap: .9rem;
-  background: var(--paper);
-  transition: opacity .5s ease;
+  background: var(--page-loader-bg, var(--paper));
+  transition: opacity .5s ease, background .45s ease;
 }
 
 .page-loader--hidden {
@@ -144,6 +147,8 @@ a:focus-visible, button:focus-visible {
   width: 56px;
   height: 56px;
   object-fit: contain;
+  filter: var(--page-loader-logo-filter, brightness(0) saturate(100%));
+  transition: filter .45s ease, opacity .3s ease, transform .45s ease;
   animation: page-loader-logo-pulse 1.4s ease-in-out infinite;
 }
 
@@ -190,7 +195,8 @@ a:focus-visible, button:focus-visible {
   left: -40%;
   width: 40%;
   height: 100%;
-  background: var(--blue);
+  background: var(--page-loader-accent, var(--blue));
+  transition: background .45s ease;
   animation: page-loader-sweep 1s ease-in-out infinite;
 }
 
@@ -209,9 +215,9 @@ a:focus-visible, button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--paper);
+  background: linear-gradient(135deg, var(--page-transition-from, var(--paper)), var(--page-transition-to, var(--paper)));
   opacity: 0;
-  transition: opacity .3s ease;
+  transition: opacity .3s ease, background .55s ease;
 }
 
 .page-transition--visible { opacity: 1; }
@@ -220,7 +226,8 @@ a:focus-visible, button:focus-visible {
   width: 34px;
   height: 34px;
   border: 3px solid var(--line);
-  border-top-color: var(--blue);
+  border-top-color: var(--page-transition-accent, var(--blue));
+  border-right-color: var(--page-transition-accent, var(--blue));
   border-radius: 50%;
   animation: page-transition-spin .7s linear infinite;
 }
@@ -641,6 +648,9 @@ a:focus-visible, button:focus-visible {
    Scoped entirely to body.theme-newswebsite so no other page is affected
    ========================================================================== */
 .theme-newswebsite {
+  --page-loader-bg: #0c3049;
+  --page-loader-accent: #dd9a35;
+  --page-loader-logo-filter: brightness(0) saturate(100%) sepia(1) saturate(10) hue-rotate(-34deg) brightness(1.2);
   background: #0c3049;
 }
 
@@ -1230,6 +1240,9 @@ a:focus-visible, button:focus-visible {
    Scoped entirely to body.theme-mixle so no other page is affected
    ========================================================================== */
 .theme-mixle {
+  --page-loader-bg: #17171a;
+  --page-loader-accent: #ef7d8a;
+  --page-loader-logo-filter: brightness(0) saturate(100%) sepia(1) saturate(10) hue-rotate(-48deg) brightness(1.2);
   background:
     linear-gradient(160deg, rgba(29, 20, 32, .96) 0%, rgba(36, 26, 36, .94) 30%, rgba(26, 28, 40, .94) 60%, rgba(20, 32, 35, .96) 100%),
     linear-gradient(135deg, #ef7d8a 0%, #f2b46b 33%, #4fd1c5 66%, #5b8def 100%);
@@ -1514,6 +1527,9 @@ a:focus-visible, button:focus-visible {
    Scoped entirely to body.theme-scamester so no other page is affected
    ========================================================================== */
 .theme-scamester {
+  --page-loader-bg: #0b0f14;
+  --page-loader-accent: #4ee6c2;
+  --page-loader-logo-filter: brightness(0) saturate(100%) sepia(1) saturate(10) hue-rotate(140deg) brightness(1.2);
   background: #0b0f14;
 }
 
@@ -2633,6 +2649,9 @@ a:focus-visible, button:focus-visible {
 body.theme-crimson-cyber {
   --accent: #ff2d55;
   --secondary: #f4b4c6;
+  --page-loader-bg: #160a14;
+  --page-loader-accent: #ff2d55;
+  --page-loader-logo-filter: brightness(0) saturate(100%) sepia(1) saturate(10) hue-rotate(-18deg) brightness(1.18);
   --page-bg: #160a14;
   --panel-bg: #1d1019;
   --panel-elevated: #220f1b;
