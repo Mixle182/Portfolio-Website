@@ -3303,6 +3303,7 @@ body.theme-crimson-cyber .nav-item--active {
 
 @media (min-width: 900px) {
   .portfolio-resume > #education > .content-width,
+  .portfolio-resume > #experience > .content-width,
   .portfolio-resume > #projects > .content-width,
   .portfolio-resume > #skills > .content-width,
   .portfolio-resume > #tools > .content-width,
@@ -3318,6 +3319,7 @@ body.theme-crimson-cyber .nav-item--active {
 
   .portfolio-resume > #education > .content-width > div:first-child,
   .portfolio-resume > #references > .content-width > div:first-child,
+  .portfolio-resume > #experience .content-width > .max-w-2xl,
   .portfolio-resume > #projects .content-width > .max-w-2xl,
   .portfolio-resume > #skills .content-width > .max-w-2xl,
   .portfolio-resume > #tools .content-width > .max-w-2xl,
@@ -3331,6 +3333,7 @@ body.theme-crimson-cyber .nav-item--active {
 
   .portfolio-resume > #education > .content-width > div:nth-child(2),
   .portfolio-resume > #references > .content-width > div:nth-child(2),
+  .portfolio-resume > #experience .content-width > .mt-9.grid,
   .portfolio-resume > #projects .content-width > .mt-9.grid,
   .portfolio-resume > #skills .content-width > .mt-9.grid,
   .portfolio-resume > #tools .content-width > .tool-marquee,
@@ -3352,6 +3355,29 @@ body.theme-crimson-cyber .nav-item--active {
   .portfolio-resume > #projects .content-width > .mt-9.grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
+  }
+
+  .portfolio-resume > #experience .content-width > .mt-9.grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .portfolio-resume > #experience .project-card:first-child {
+    display: grid;
+    grid-template-columns: minmax(150px, .32fr) minmax(0, .68fr);
+    column-gap: 1.5rem;
+    grid-column: 1 / -1;
+  }
+
+  .portfolio-resume > #experience .project-card:first-child > :first-child {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    align-self: start;
+    padding-top: .25rem;
+  }
+
+  .portfolio-resume > #experience .project-card:first-child > :not(:first-child) {
+    grid-column: 2;
   }
 
   .portfolio-resume > #projects .project-card:first-child {
