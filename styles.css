@@ -1971,10 +1971,10 @@ a:focus-visible, button:focus-visible {
 .tool-marquee__track {
   display: flex;
   width: max-content;
-  justify-content: center;
-  margin: 0 auto;
+  justify-content: flex-start;
+  margin: 0;
   animation: tool-marquee-scroll 24s linear infinite;
-  padding-left: 1.2rem;
+  padding-left: 0;
 }
 
 .tool-marquee:hover .tool-marquee__track {
