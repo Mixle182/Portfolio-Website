@@ -1863,10 +1863,10 @@ a:focus-visible, button:focus-visible {
 .tool-marquee {
   position: relative;
   overflow: hidden;
-  border-top: 1px solid rgba(123, 220, 255, .18);
-  border-bottom: 1px solid rgba(123, 220, 255, .18);
-  background: rgba(9, 18, 28, .3);
-  padding: .7rem 0;
+  border-top: 1px solid rgba(115, 183, 255, .45);
+  border-bottom: 1px solid rgba(115, 183, 255, .45);
+  background: rgba(4, 15, 27, .75);
+  padding: .8rem 0;
   mask-image: linear-gradient(to right, transparent 0, #000 4%, #000 96%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0, #000 4%, #000 96%, transparent 100%);
 }
@@ -1874,7 +1874,7 @@ a:focus-visible, button:focus-visible {
 .tool-marquee__track {
   display: flex;
   width: max-content;
-  animation: tool-marquee-scroll 22s linear infinite;
+  animation: tool-marquee-scroll 24s linear infinite;
 }
 
 .tool-marquee:hover .tool-marquee__track {
@@ -1892,14 +1892,25 @@ a:focus-visible, button:focus-visible {
 .tool-card {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: .55rem;
   min-width: fit-content;
-  border: 1px solid rgba(123, 220, 255, .24);
-  background: rgba(19, 32, 46, .9);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .02);
-  padding: .55rem .9rem;
-  border-radius: .9rem;
+  border: 1px solid rgba(115, 183, 255, .5);
+  background: rgba(8, 23, 35, .9);
+  border-radius: 12px;
+  padding: .6rem .9rem;
   white-space: nowrap;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
+}
+
+.tool-card--combo {
+  gap: .4rem;
+}
+
+.tool-card--highlight {
+  background: #f9df3c;
+  border-color: #f9df3c;
+  min-width: 110px;
 }
 
 .tool-card__logo {
@@ -1910,12 +1921,29 @@ a:focus-visible, button:focus-visible {
   display: block;
 }
 
+.tool-card__logo--small {
+  width: 16px;
+  height: 16px;
+}
+
+.tool-card__mark {
+  color: #101522;
+  font-size: 1.35rem;
+  font-weight: 900;
+  font-family: "Source Serif 4", serif;
+  letter-spacing: -.06em;
+}
+
 .tool-card__name {
   color: var(--ink);
   font-size: .72rem;
   font-weight: 700;
   letter-spacing: .02em;
   white-space: nowrap;
+}
+
+.tool-card--highlight .tool-card__mark {
+  color: #121722;
 }
 
 @keyframes tool-marquee-scroll {
@@ -1926,6 +1954,7 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 640px) {
   .tool-card { padding: .5rem .75rem; }
   .tool-card__name { font-size: .68rem; }
+  .tool-card--highlight { min-width: 92px; }
 }
 
 /* ==========================================================================
