@@ -3491,6 +3491,20 @@ body.theme-crimson-cyber .nav-item--active {
     gap: .75rem;
   }
 
+  .portfolio-resume > #tools > .content-width {
+    display: block;
+    grid-template-columns: none;
+    column-gap: 0;
+  }
+
+  .portfolio-resume > #tools > .content-width > .max-w-2xl,
+  .portfolio-resume > #tools > .content-width > .tool-marquee {
+    grid-column: auto;
+    grid-row: auto;
+    max-width: none;
+    margin: 0;
+  }
+
 }
 
 @media (max-width: 899px) {
