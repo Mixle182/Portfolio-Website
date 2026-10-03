@@ -301,7 +301,7 @@ a:focus-visible, button:focus-visible {
 .site-header {
   width: 100%;
   border-bottom: 1px solid var(--line);
-  background: rgba(11, 15, 26, .82);
+  background: #0b0f1a;
 }
 
 .nav-bar {
@@ -399,7 +399,7 @@ a:focus-visible, button:focus-visible {
   right: 0;
   z-index: 60;
   flex-direction: column;
-  background: rgba(11, 15, 26, .88);
+  background: #0b0f1a;
   border-top: 1px solid var(--line);
   box-shadow: 0 16px 28px -12px rgba(0, 217, 255, .16);
   max-height: calc(100vh - 64px);
@@ -3144,30 +3144,6 @@ body.theme-crimson-cyber .nav-item--active {
   padding: .35rem .6rem;
 }
 
-.portfolio-resume #experience .project-card {
-  border: 1px solid rgba(115, 183, 255, .2);
-  border-left: 1px solid rgba(115, 183, 255, .2);
-  background: linear-gradient(145deg, rgba(23, 42, 61, .82), rgba(9, 19, 31, .78));
-  padding: 1.4rem;
-  transition: border-color .2s ease, transform .2s ease, background .2s ease;
-}
-
-.portfolio-resume #experience .project-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(0, 217, 255, .56);
-  background: linear-gradient(145deg, rgba(26, 52, 72, .94), rgba(9, 19, 31, .9));
-}
-
-.portfolio-resume #experience .project-card .text-tiny-strong {
-  color: var(--resume-accent);
-  font-size: .68rem;
-}
-
-.portfolio-resume #experience .experience-grid {
-  grid-template-columns: minmax(0, 1fr);
-  gap: 1rem;
-}
-
 .portfolio-resume #skills .tool-card,
 .portfolio-resume #leadership .tool-card {
   min-height: 112px;
@@ -3327,7 +3303,6 @@ body.theme-crimson-cyber .nav-item--active {
 
 @media (min-width: 900px) {
   .portfolio-resume > #education > .content-width,
-  .portfolio-resume > #experience > .content-width,
   .portfolio-resume > #projects > .content-width,
   .portfolio-resume > #skills > .content-width,
   .portfolio-resume > #tools > .content-width,
@@ -3343,7 +3318,6 @@ body.theme-crimson-cyber .nav-item--active {
 
   .portfolio-resume > #education > .content-width > div:first-child,
   .portfolio-resume > #references > .content-width > div:first-child,
-  .portfolio-resume > #experience .content-width > .max-w-2xl,
   .portfolio-resume > #projects .content-width > .max-w-2xl,
   .portfolio-resume > #skills .content-width > .max-w-2xl,
   .portfolio-resume > #tools .content-width > .max-w-2xl,
@@ -3357,7 +3331,6 @@ body.theme-crimson-cyber .nav-item--active {
 
   .portfolio-resume > #education > .content-width > div:nth-child(2),
   .portfolio-resume > #references > .content-width > div:nth-child(2),
-  .portfolio-resume > #experience .content-width > .experience-grid,
   .portfolio-resume > #projects .content-width > .mt-9.grid,
   .portfolio-resume > #skills .content-width > .mt-9.grid,
   .portfolio-resume > #tools .content-width > .tool-marquee,
@@ -3379,25 +3352,6 @@ body.theme-crimson-cyber .nav-item--active {
   .portfolio-resume > #projects .content-width > .mt-9.grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
-  }
-
-  .portfolio-resume > #experience .project-card {
-    display: grid;
-    grid-template-columns: minmax(150px, .32fr) minmax(0, .68fr);
-    column-gap: 1.5rem;
-    min-height: 220px;
-    align-content: start;
-  }
-
-  .portfolio-resume > #experience .project-card > :first-child {
-    grid-column: 1;
-    grid-row: 1 / span 5;
-    align-self: start;
-    padding-top: .25rem;
-  }
-
-  .portfolio-resume > #experience .project-card > :not(:first-child) {
-    grid-column: 2;
   }
 
   .portfolio-resume > #projects .project-card:first-child {
