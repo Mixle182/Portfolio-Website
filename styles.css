@@ -2075,6 +2075,22 @@ a:focus-visible, button:focus-visible {
   display: block;
   width: 100%;
   margin-top: 1.5rem;
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 900px) {
+  .portfolio-resume > #tools .content-width {
+    display: block;
+    grid-template-columns: none;
+  }
+
+  .portfolio-resume > #tools .content-width > .max-w-2xl {
+    display: none;
+  }
+
+  .portfolio-resume > #tools .content-width > .tool-marquee {
+    grid-column: 1 / -1;
+  }
 }
 
 @keyframes tool-marquee-scroll {
