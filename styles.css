@@ -493,10 +493,10 @@ a:focus-visible, button:focus-visible {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 15% 20%, rgba(255,255,255,.98), rgba(255,255,255,0) 24%),
-    radial-gradient(circle at 78% 22%, rgba(255,255,255,.7), rgba(255,255,255,0) 22%),
-    linear-gradient(135deg, #d9f0ff 0%, #cfe7f8 30%, #ebf5ff 70%, #eff4ff 100%);
-  border-bottom: 1px solid rgba(14, 24, 39, .08);
+    radial-gradient(circle at 15% 20%, rgba(45, 148, 255, .35), rgba(45, 148, 255, 0) 24%),
+    radial-gradient(circle at 78% 22%, rgba(0, 217, 255, .22), rgba(0, 217, 255, 0) 20%),
+    linear-gradient(135deg, #07131d 0%, #0d1f2f 28%, #10243d 62%, #0b1220 100%);
+  border-bottom: 1px solid rgba(123, 220, 255, .18);
 }
 
 .banner-hero__inner {
@@ -545,19 +545,6 @@ a:focus-visible, button:focus-visible {
   font-weight: 500;
 }
 
-.banner-hero__button {
-  margin-top: 1.15rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: .9rem 1.6rem;
-  border-radius: 999px;
-  box-shadow: 0 12px 26px rgba(168, 105, 217, .22);
-  font-size: .8rem;
-  letter-spacing: .02em;
-  text-transform: none;
-}
-
 .banner-hero__visual {
   position: relative;
   display: flex;
@@ -580,32 +567,6 @@ a:focus-visible, button:focus-visible {
   max-height: 540px;
   object-fit: contain;
   filter: drop-shadow(0 24px 32px rgba(66, 76, 92, .12));
-}
-
-.banner-hero__role {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: .2rem;
-  padding-right: .5rem;
-  color: #0b0f1a;
-  font-family: "Source Serif 4", serif;
-  font-weight: 900;
-  font-size: clamp(2rem, 3vw, 4rem);
-  line-height: .9;
-  letter-spacing: -.06em;
-  text-transform: uppercase;
-  text-align: left;
-}
-
-.banner-hero__role-line {
-  display: block;
-}
-
-.banner-hero__role-line--accent {
-  color: #d86fe4;
-  font-style: normal;
 }
 
 .hero-role {
