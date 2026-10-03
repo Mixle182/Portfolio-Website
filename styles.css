@@ -3353,11 +3353,15 @@ body.theme-crimson-cyber .nav-item--active {
     margin-top: 0;
   }
 
-  .portfolio-resume > #experience .content-width > .mt-9.grid,
   .portfolio-resume > #certificates .content-width > .mt-9.grid,
   .portfolio-resume > #references .content-width > div:nth-child(2) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem 1.5rem;
+  }
+
+  .portfolio-resume > #experience .content-width > .mt-9.grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
   }
 
   .portfolio-resume > #projects .content-width > .mt-9.grid {
@@ -3365,21 +3369,22 @@ body.theme-crimson-cyber .nav-item--active {
     gap: 1rem;
   }
 
-  .portfolio-resume > #experience .project-card:first-child {
+  .portfolio-resume > #experience .project-card {
     display: grid;
     grid-template-columns: minmax(150px, .32fr) minmax(0, .68fr);
     column-gap: 1.5rem;
-    grid-column: 1 / -1;
+    min-height: 220px;
+    align-content: start;
   }
 
-  .portfolio-resume > #experience .project-card:first-child > :first-child {
+  .portfolio-resume > #experience .project-card > :first-child {
     grid-column: 1;
     grid-row: 1 / span 5;
     align-self: start;
     padding-top: .25rem;
   }
 
-  .portfolio-resume > #experience .project-card:first-child > :not(:first-child) {
+  .portfolio-resume > #experience .project-card > :not(:first-child) {
     grid-column: 2;
   }
 
