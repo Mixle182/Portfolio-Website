@@ -94,8 +94,16 @@
             </p>
           </div>
 
-          <div class="mt-9 grid gap-5 lg:grid-cols-3">
-            <article class="project-card reveal-stagger">
+          <div class="experience-scroll feature-scroll">
+            <div class="feature-scroll__triggers" aria-hidden="true">
+              <div class="feature-scroll__trigger" data-feature="experience-volunteer"></div>
+              <div class="feature-scroll__trigger" data-feature="experience-web"></div>
+              <div class="feature-scroll__trigger" data-feature="experience-intern"></div>
+              <div class="feature-scroll__trigger" data-feature="experience-service"></div>
+            </div>
+
+            <div class="feature-scroll__pinned experience-scroll__pinned">
+            <article class="project-card feature-scroll__detail is-active" data-feature="experience-volunteer">
               <p class="text-tiny-strong uppercase tracking-[.12em]">November 2024 — July 2026</p>
               <h3 class="heading-card mt-3">Student Volunteer</h3>
               <p class="resume-entry__org mt-1">University of Makati — Center for Integrated Communications</p>
@@ -106,7 +114,7 @@
               <p class="project-card__tag">Production · Web Content · CG</p>
             </article>
 
-            <article class="project-card reveal-stagger">
+            <article class="project-card feature-scroll__detail" data-feature="experience-web">
               <p class="text-tiny-strong uppercase tracking-[.12em]">January 2025 — June 2026</p>
               <h3 class="heading-card mt-3">Web Developer</h3>
               <p class="resume-entry__org mt-1">UMak Student Multimedia Organization (USMO) — Social Media Dept.</p>
@@ -117,7 +125,7 @@
               <p class="project-card__tag">Web Development · CMS</p>
             </article>
 
-            <article class="project-card reveal-stagger">
+            <article class="project-card feature-scroll__detail" data-feature="experience-intern">
               <p class="text-tiny-strong uppercase tracking-[.12em]">January 2025 — May 2025</p>
               <h3 class="heading-card mt-3">Intern</h3>
               <p class="resume-entry__org mt-1">University of Makati — Center for Integrated Communications</p>
@@ -127,7 +135,7 @@
               <p class="project-card__tag">Web Content · Brand Standards</p>
             </article>
 
-            <article class="project-card reveal-stagger">
+            <article class="project-card feature-scroll__detail" data-feature="experience-service">
               <p class="text-tiny-strong uppercase tracking-[.12em]">September 2021 — December 2021</p>
               <h3 class="heading-card mt-3">Public Service Intern</h3>
               <p class="resume-entry__org mt-1">Makati City Government — Public Employment Service Office (PESO)</p>
@@ -138,6 +146,7 @@
               </p>
               <p class="project-card__tag">Public Service · Community Assistance</p>
             </article>
+            </div>
           </div>
         </div>
       </section>
