@@ -260,7 +260,8 @@ a:focus-visible, button:focus-visible {
   .showcase-scroll-cue { animation: none; }
   .theme-scamester .page-loader { animation: none; background: #0b0f14; }
 
-  .reveal {
+  .reveal,
+  .reveal-stagger {
     opacity: 1;
     transform: none;
     transition: none;
@@ -1816,6 +1817,17 @@ a:focus-visible, button:focus-visible {
 }
 
 .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.reveal-stagger.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
