@@ -1957,6 +1957,16 @@ a:focus-visible, button:focus-visible {
   -webkit-mask-image: linear-gradient(to right, transparent 0, #000 4%, #000 96%, transparent 100%);
 }
 
+.tool-marquee__header {
+  padding: 0 1.25rem .35rem;
+  text-align: center;
+}
+
+.tool-marquee__header .eyebrow,
+.tool-marquee__header .heading-lg {
+  margin: 0;
+}
+
 .tool-marquee__track {
   display: flex;
   width: max-content;
