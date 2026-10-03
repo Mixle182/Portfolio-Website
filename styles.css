@@ -3352,34 +3352,13 @@ body.theme-crimson-cyber .nav-item--active {
     gap: 1rem 1.5rem;
   }
 
+  .portfolio-resume > #experience .content-width > .mt-9.grid,
   .portfolio-resume > #projects .content-width > .mt-9.grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
   }
 
-  .portfolio-resume > #experience .content-width > .mt-9.grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
-
-  .portfolio-resume > #experience .project-card:first-child {
-    display: grid;
-    grid-template-columns: minmax(150px, .32fr) minmax(0, .68fr);
-    column-gap: 1.5rem;
-    grid-column: 1 / -1;
-  }
-
-  .portfolio-resume > #experience .project-card:first-child > :first-child {
-    grid-column: 1;
-    grid-row: 1 / span 4;
-    align-self: start;
-    padding-top: .25rem;
-  }
-
-  .portfolio-resume > #experience .project-card:first-child > :not(:first-child) {
-    grid-column: 2;
-  }
-
+  .portfolio-resume > #experience .project-card:first-child,
   .portfolio-resume > #projects .project-card:first-child {
     display: grid;
     grid-template-columns: minmax(150px, .32fr) minmax(0, .68fr);
@@ -3387,6 +3366,7 @@ body.theme-crimson-cyber .nav-item--active {
     grid-column: 1 / -1;
   }
 
+  .portfolio-resume > #experience .project-card:first-child > :first-child,
   .portfolio-resume > #projects .project-card:first-child > :first-child {
     grid-column: 1;
     grid-row: 1 / span 4;
@@ -3394,6 +3374,7 @@ body.theme-crimson-cyber .nav-item--active {
     padding-top: .25rem;
   }
 
+  .portfolio-resume > #experience .project-card:first-child > :not(:first-child),
   .portfolio-resume > #projects .project-card:first-child > :not(:first-child) {
     grid-column: 2;
   }
