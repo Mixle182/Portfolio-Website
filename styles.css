@@ -16,7 +16,7 @@
   --steel-panel: #1e3a5f;
   --page-loader-bg: #0b0f1a;
   --page-loader-accent: #00d9ff;
-  --page-loader-logo-filter: brightness(0) saturate(100%) sepia(1) saturate(10) hue-rotate(190deg) brightness(1.15);
+  --page-loader-logo-filter: brightness(0) invert(1);
 }
 
 /* ==========================================================================
@@ -331,6 +331,7 @@ a:focus-visible, button:focus-visible {
   height: 34px;
   object-fit: contain;
   flex-shrink: 0;
+  filter: brightness(0) invert(1);
 }
 
 .brand-text { display: block; min-width: 0; }
