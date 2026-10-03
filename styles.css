@@ -3038,20 +3038,18 @@ body.theme-crimson-cyber .nav-item--active {
    Index resume: editorial portfolio system
    ========================================================================== */
 .portfolio-resume {
-  counter-reset: resume-section;
-  --resume-accent: #c8f36b;
+  --resume-accent: #00d9ff;
 }
 
 .portfolio-resume > .resume-section {
   position: relative;
   isolation: isolate;
-  counter-increment: resume-section;
   border-top: 0;
   background-image: linear-gradient(105deg, rgba(0, 217, 255, .035), transparent 58%);
 }
 
 .portfolio-resume > .resume-section:nth-of-type(even) {
-  background-image: linear-gradient(105deg, rgba(200, 243, 107, .025), transparent 62%);
+  background-image: linear-gradient(105deg, rgba(0, 217, 255, .025), transparent 62%);
 }
 
 .portfolio-resume .content-width {
@@ -3059,20 +3057,10 @@ body.theme-crimson-cyber .nav-item--active {
 }
 
 .portfolio-resume .eyebrow {
-  display: flex;
-  align-items: center;
-  gap: .7rem;
+  display: block;
   color: var(--muted);
   font-size: .68rem;
   letter-spacing: .12em;
-}
-
-.portfolio-resume .eyebrow::before {
-  content: counter(resume-section, decimal-leading-zero);
-  color: var(--resume-accent);
-  font-size: .75rem;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: .04em;
 }
 
 .portfolio-resume .heading-lg {
@@ -3084,7 +3072,7 @@ body.theme-crimson-cyber .nav-item--active {
 .portfolio-resume .resume-entry {
   position: relative;
   border: 0;
-  border-left: 1px solid rgba(200, 243, 107, .55);
+  border-left: 1px solid rgba(0, 217, 255, .55);
   padding: .15rem 0 .15rem 1.5rem;
 }
 
@@ -3096,7 +3084,7 @@ body.theme-crimson-cyber .nav-item--active {
   height: .45rem;
   border-radius: 50%;
   background: var(--resume-accent);
-  box-shadow: 0 0 14px rgba(200, 243, 107, .45);
+  box-shadow: 0 0 14px rgba(0, 217, 255, .45);
   content: "";
 }
 
@@ -3145,32 +3133,22 @@ body.theme-crimson-cyber .nav-item--active {
 }
 
 .portfolio-resume #experience .project-card {
-  position: relative;
-  border: 0;
-  border-top: 1px solid rgba(115, 183, 255, .22);
-  background: transparent;
-  padding: 1.15rem .25rem 1.1rem 2.8rem;
+  border: 1px solid rgba(115, 183, 255, .2);
+  border-left: 1px solid rgba(115, 183, 255, .2);
+  background: linear-gradient(145deg, rgba(23, 42, 61, .82), rgba(9, 19, 31, .78));
+  padding: 1.4rem;
+  transition: border-color .2s ease, transform .2s ease, background .2s ease;
 }
-
-.portfolio-resume #experience .project-card::before {
-  position: absolute;
-  top: 1.2rem;
-  left: .2rem;
-  color: var(--resume-accent);
-  font-size: .72rem;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-}
-
-.portfolio-resume #experience .project-card:nth-child(1)::before { content: "01"; }
-.portfolio-resume #experience .project-card:nth-child(2)::before { content: "02"; }
-.portfolio-resume #experience .project-card:nth-child(3)::before { content: "03"; }
-.portfolio-resume #experience .project-card:nth-child(4)::before { content: "04"; }
 
 .portfolio-resume #experience .project-card:hover {
-  transform: none;
-  border-color: rgba(115, 183, 255, .22);
-  background: rgba(0, 217, 255, .025);
+  transform: translateY(-3px);
+  border-color: rgba(0, 217, 255, .56);
+  background: linear-gradient(145deg, rgba(26, 52, 72, .94), rgba(9, 19, 31, .9));
+}
+
+.portfolio-resume #experience .project-card .text-tiny-strong {
+  color: var(--resume-accent);
+  font-size: .68rem;
 }
 
 .portfolio-resume #skills .tool-card,
@@ -3219,8 +3197,8 @@ body.theme-crimson-cyber .nav-item--active {
 .portfolio-resume #certificates .detail-card__icon-wrap {
   width: 32px;
   height: 32px;
-  border: 1px solid rgba(200, 243, 107, .22);
-  background: rgba(200, 243, 107, .07);
+  border: 1px solid rgba(0, 217, 255, .22);
+  background: rgba(0, 217, 255, .07);
   color: var(--resume-accent);
 }
 
@@ -3281,6 +3259,55 @@ body.theme-crimson-cyber .nav-item--active {
   line-height: 1.5;
 }
 
+.portfolio-resume #beyond-information .visit-bubble {
+  min-height: 250px;
+  justify-content: flex-start;
+  border: 1px solid rgba(0, 217, 255, .3);
+  border-radius: 4px;
+  padding: 2rem;
+  text-align: left;
+}
+
+.portfolio-resume #beyond-information .visit-bubble__content {
+  align-items: flex-start;
+}
+
+.portfolio-resume #beyond-information .visit-bubble__desc {
+  max-width: 38rem;
+}
+
+.portfolio-resume .visit-bubble--beyond .visit-bubble__cta {
+  background: rgba(0, 217, 255, .1);
+  border-color: rgba(0, 217, 255, .7);
+  color: #80eaff;
+}
+
+.portfolio-resume .visit-bubble--beyond:hover,
+.portfolio-resume .visit-bubble--beyond:focus-visible {
+  border-color: rgba(0, 217, 255, .9);
+  box-shadow: 0 0 30px rgba(0, 217, 255, .2), 0 24px 40px -24px rgba(0, 0, 0, .7);
+}
+
+.portfolio-resume .visit-bubble--beyond:hover .visit-bubble__overlay,
+.portfolio-resume .visit-bubble--beyond:focus-visible .visit-bubble__overlay {
+  background: linear-gradient(180deg, rgba(4, 24, 54, .45), rgba(3, 14, 29, .95));
+}
+
+.portfolio-resume .visit-bubble--beyond:hover .visit-bubble__cta,
+.portfolio-resume .visit-bubble--beyond:focus-visible .visit-bubble__cta {
+  background: rgba(0, 217, 255, .18);
+  border-color: #00d9ff;
+  color: #b8f5ff;
+}
+
+.portfolio-resume .visit-bubble--beyond:hover .visit-bubble__title,
+.portfolio-resume .visit-bubble--beyond:hover .visit-bubble__desc,
+.portfolio-resume .visit-bubble--beyond:focus-visible .visit-bubble__title,
+.portfolio-resume .visit-bubble--beyond:focus-visible .visit-bubble__desc {
+  color: #e6fbff;
+  text-shadow: 0 0 16px rgba(0, 217, 255, .48);
+}
+
 @media (min-width: 900px) {
   .portfolio-resume > #education > .content-width,
   .portfolio-resume > #experience > .content-width,
@@ -3338,6 +3365,24 @@ body.theme-crimson-cyber .nav-item--active {
     gap: 1rem;
   }
 
+  .portfolio-resume > #experience .project-card:first-child {
+    display: grid;
+    grid-template-columns: minmax(150px, .32fr) minmax(0, .68fr);
+    column-gap: 1.5rem;
+    grid-column: 1 / -1;
+  }
+
+  .portfolio-resume > #experience .project-card:first-child > :first-child {
+    grid-column: 1;
+    grid-row: 1 / span 5;
+    align-self: start;
+    padding-top: .25rem;
+  }
+
+  .portfolio-resume > #experience .project-card:first-child > :not(:first-child) {
+    grid-column: 2;
+  }
+
   .portfolio-resume > #projects .project-card:first-child {
     display: grid;
     grid-template-columns: minmax(150px, .32fr) minmax(0, .68fr);
@@ -3362,10 +3407,6 @@ body.theme-crimson-cyber .nav-item--active {
     gap: .75rem;
   }
 
-  .portfolio-resume > #digital-works .content-width > .visit-bubble {
-    grid-column: 2;
-    margin-top: 1.25rem;
-  }
 }
 
 @media (max-width: 899px) {
@@ -3388,5 +3429,10 @@ body.theme-crimson-cyber .nav-item--active {
   .portfolio-resume #leadership .tool-card {
     min-height: 100px;
     padding: .8rem;
+  }
+
+  .portfolio-resume #beyond-information .visit-bubble {
+    min-height: 220px;
+    padding: 1.35rem;
   }
 }
