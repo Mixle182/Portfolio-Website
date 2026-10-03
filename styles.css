@@ -3163,6 +3163,11 @@ body.theme-crimson-cyber .nav-item--active {
   font-size: .68rem;
 }
 
+.portfolio-resume #experience .experience-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
 .portfolio-resume #skills .tool-card,
 .portfolio-resume #leadership .tool-card {
   min-height: 112px;
@@ -3352,7 +3357,7 @@ body.theme-crimson-cyber .nav-item--active {
 
   .portfolio-resume > #education > .content-width > div:nth-child(2),
   .portfolio-resume > #references > .content-width > div:nth-child(2),
-  .portfolio-resume > #experience .content-width > .experience-scroll,
+  .portfolio-resume > #experience .content-width > .experience-grid,
   .portfolio-resume > #projects .content-width > .mt-9.grid,
   .portfolio-resume > #skills .content-width > .mt-9.grid,
   .portfolio-resume > #tools .content-width > .tool-marquee,
@@ -3449,59 +3454,3 @@ body.theme-crimson-cyber .nav-item--active {
   }
 }
 
-.portfolio-resume #experience .experience-scroll.feature-scroll {
-  height: 400vh;
-}
-
-.portfolio-resume #experience .experience-scroll .feature-scroll__trigger {
-  height: 100vh;
-}
-
-.portfolio-resume #experience .experience-scroll .feature-scroll__trigger:nth-child(1) { top: 0; }
-.portfolio-resume #experience .experience-scroll .feature-scroll__trigger:nth-child(2) { top: 100vh; }
-.portfolio-resume #experience .experience-scroll .feature-scroll__trigger:nth-child(3) { top: 200vh; }
-.portfolio-resume #experience .experience-scroll .feature-scroll__trigger:nth-child(4) { top: 300vh; }
-
-.portfolio-resume #experience .experience-scroll__pinned {
-  top: 6rem;
-  display: block;
-  width: 100%;
-  height: calc(100vh - 7rem);
-}
-
-.portfolio-resume #experience .feature-scroll__detail {
-  inset: auto 0 auto;
-  top: 50%;
-  display: grid;
-  width: 100%;
-  transform: translateY(calc(-50% + 1rem));
-  visibility: hidden;
-  transition: opacity .5s ease, transform .5s ease, visibility .5s;
-}
-
-.portfolio-resume #experience .feature-scroll__detail.is-active {
-  z-index: 1;
-  transform: translateY(-50%);
-  visibility: visible;
-}
-
-@media (min-width: 900px) {
-  .portfolio-resume > #experience .content-width > .max-w-2xl {
-    position: sticky;
-    top: 7rem;
-    align-self: start;
-  }
-}
-
-@media (max-width: 899px) {
-  .portfolio-resume #experience .experience-scroll__pinned {
-    top: 5.5rem;
-    height: calc(100vh - 6.5rem);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .portfolio-resume #experience .feature-scroll__detail {
-    transition: none;
-  }
-}
