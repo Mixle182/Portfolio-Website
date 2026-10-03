@@ -1946,7 +1946,8 @@ a:focus-visible, button:focus-visible {
 .tool-marquee {
   position: relative;
   overflow: hidden;
-  width: min(100%, 1500px);
+  width: 100%;
+  max-width: none;
   margin-left: auto;
   margin-right: auto;
   border-top: 1px solid rgba(115, 183, 255, .45);
@@ -2058,6 +2059,8 @@ a:focus-visible, button:focus-visible {
 
 .portfolio-resume > #tools .content-width {
   display: block;
+  width: 100%;
+  max-width: none;
   text-align: center;
 }
 
@@ -2068,6 +2071,7 @@ a:focus-visible, button:focus-visible {
 
 .portfolio-resume > #tools .content-width > .tool-marquee {
   display: block;
+  width: 100%;
   margin-top: 1.5rem;
 }
 
