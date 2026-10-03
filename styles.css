@@ -1858,13 +1858,39 @@ a:focus-visible, button:focus-visible {
 }
 
 /* ==========================================================================
-   Tool grid (column & row layout, like project cards)
+   Continuous tool carousel
    ========================================================================== */
+.tool-marquee {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+
+.tool-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: tool-marquee-scroll 24s linear infinite;
+}
+
+.tool-marquee:hover .tool-marquee__track {
+  animation-play-state: paused;
+}
+
+.tool-marquee__group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
 .tool-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: .6rem;
+  min-width: 180px;
   border: 1px solid var(--line);
   border-top: 3px solid var(--blue);
   background: rgba(30, 58, 95, .7);
@@ -1882,6 +1908,15 @@ a:focus-visible, button:focus-visible {
   color: var(--ink);
   font-size: .85rem;
   font-weight: 700;
+}
+
+@keyframes tool-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (max-width: 640px) {
+  .tool-card { min-width: 150px; }
 }
 
 /* ==========================================================================
