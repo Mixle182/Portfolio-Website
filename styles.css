@@ -1902,11 +1902,12 @@ a:focus-visible, button:focus-visible {
   white-space: nowrap;
 }
 
-.tool-card__icon {
-  width: 16px;
-  height: 16px;
-  color: #ff5fcf;
+.tool-card__logo {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
   flex-shrink: 0;
+  display: block;
 }
 
 .tool-card__name {
