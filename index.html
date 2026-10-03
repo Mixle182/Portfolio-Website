@@ -44,22 +44,28 @@
 
     <main id="top" class="main--with-fixed-header">
 
-      <section id="profile" class="w-full">
-        <div class="content-width grid gap-10 py-12 md:grid-cols-[220px_1fr] md:gap-14 md:py-16">
-          <aside class="mx-auto w-full max-w-[220px] md:mx-0">
-            <div class="portrait-frame">
+      <section id="profile" class="banner-hero">
+        <div class="content-width banner-hero__inner">
+          <div class="banner-hero__content">
+            <p class="banner-hero__lead">I AM</p>
+            <h1 class="banner-hero__name">John Sherwin T. Limbo</h1>
+            <p class="banner-hero__tagline">
+              Computer Science graduate with foundational experience in web development, interaction design,
+              multimedia production, content management, and collaborative project work.
+            </p>
+            <a class="btn btn--primary banner-hero__button" href="#projects">Download Portfolio</a>
+          </div>
+
+          <div class="banner-hero__visual">
+            <div class="banner-hero__portrait-wrap">
               <img loading="lazy" src="images/Profile Picture.JPG" alt="Professional headshot of John Sherwin T. Limbo in formal attire">
             </div>
-          </aside>
-          <div class="max-w-3xl">
-            <p class="eyebrow">Professional Portfolio</p>
-            <h1 class="serif heading-hero mt-3">John Sherwin T. Limbo</h1>
-            <p class="hero-role">Bachelor of Science in Computer Science Graduate</p>
-            <p class="text-body mt-6">
-              Computer Science graduate with foundational experience in web development, interaction design,
-              multimedia production, content management, and collaborative project work. Brings a practical,
-              detail-oriented approach to building clear and user-focused digital experiences.
-            </p>
+          </div>
+
+          <div class="banner-hero__role" aria-label="Web Developer">
+            <span class="banner-hero__role-line">A WEB</span>
+            <span class="banner-hero__role-line banner-hero__role-line--accent">&lt;/&gt;</span>
+            <span class="banner-hero__role-line">DEVELOPER</span>
           </div>
         </div>
       </section>
